@@ -356,8 +356,11 @@ body {
 /* IG REELS */
 .reels-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px,1fr)); gap:14px; }
 .reel-card { border-radius:14px; overflow:hidden; border:1.5px solid var(--border); background:#fff; display:flex; flex-direction:column; }
-.reel-thumb { height:120px; display:flex; align-items:center; justify-content:center; font-size:2.2rem; flex-shrink:0; position:relative; }
-.reel-thumb-tag { position:absolute; top:8px; left:8px; font-size:9px; font-weight:700; letter-spacing:.04em; padding:2px 7px; border-radius:20px; }
+.reel-thumb { height:120px; display:flex; align-items:center; justify-content:center; flex-shrink:0; position:relative; overflow:hidden; }
+.reel-thumb::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 1.5px 1.5px, rgba(255,255,255,.55) 1px, transparent 0) 0 0/13px 13px, linear-gradient(135deg, rgba(255,255,255,.5), rgba(255,255,255,0) 60%); pointer-events:none; }
+.reel-thumb::after { content:''; position:absolute; right:-20px; bottom:-24px; width:84px; height:84px; border-radius:50%; border:2px solid rgba(255,255,255,.55); pointer-events:none; }
+.reel-thumb > span:not(.reel-thumb-tag) { position:relative; z-index:1; width:64px; height:64px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.9rem; background:rgba(255,255,255,.72); border:1.5px solid rgba(255,255,255,.95); box-shadow:0 5px 16px rgba(80,72,88,.14); }
+.reel-thumb-tag { position:absolute; top:8px; left:8px; font-size:9px; font-weight:700; letter-spacing:.04em; padding:3px 8px; border-radius:20px; z-index:2; box-shadow:0 1px 4px rgba(80,72,88,.10); }
 .reel-body { padding:12px 14px 14px; display:flex; flex-direction:column; gap:6px; flex:1; }
 .reel-handle { font-size:10px; color:var(--ink-lt); font-family:var(--ff-sans); font-weight:500; }
 .reel-handle::before { content:"@"; }

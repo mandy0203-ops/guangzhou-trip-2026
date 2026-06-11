@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>粵行手帳 ｜ 粵向山海·承先生志 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Patrick+Hand&family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+@font-face {
+  font-family: 'jf-openhuninn';
+  src: url('../../mandy-morning-dashboard/assets/fonts/jf-openhuninn.ttf') format('truetype'),
+       url('https://cdn.jsdelivr.net/gh/justfont/open-huninn-font@main/font/jf-openhuninn-2.0.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --teal:      #9ECFCC;
+  --teal-lt:   #BDD8D6;
+  --teal-pale: #E4F1F0;
+  --lavender:  #BEB8CC;
+  --lav-pale:  #ECEAF2;
+  --yellow:    #EDE6C0;
+  --yel-deep:  #ACA078;
+  --cream:     #D8D4E0;
+  --gridline:  #C8C4CE;
+  --ink:       #504858;
+  --ink-lt:    #5F5A6B;
+  --ink-pale:  #7E7986;
+  --border:    #C4C0CC;
+  --white:     #F8F6F8;
+  --rose:      #E4C4CC;
+  --rose-pale: #F4ECEE;
+  --amber:     #C8A870;
+  --amber-pale:#F0E8D4;
+  --jade:      #8BBFBA;
+  --jade-pale: #DCF0EE;
+
+  --ff-hand:  'Kalam', 'Zen Maru Gothic', 'Noto Sans TC', sans-serif;
+  --ff-serif: 'jf-openhuninn', 'Zen Maru Gothic', 'Noto Sans TC', sans-serif;
+  --ff-sans:  'jf-openhuninn', 'Zen Maru Gothic', 'Noto Sans TC', sans-serif;
+  --ff-en:    'Patrick Hand', cursive;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--ff-sans);
+  background: var(--cream);
+  color: var(--ink);
+  min-height: 100vh;
+  background-image:
+    linear-gradient(var(--gridline) 1px, transparent 1px),
+    linear-gradient(90deg, var(--gridline) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ── LAYOUT ── */
+.shell { display: flex; min-height: 100vh; max-width: 1100px; margin: 0 auto; }
+
+/* ── SIDEBAR ── */
+.sidebar {
+  width: 68px; flex-shrink: 0;
+  background: var(--white); border-right: 1.5px solid var(--border);
+  display: flex; flex-direction: column; align-items: center;
+  padding: 24px 0; position: sticky; top: 0; height: 100vh; gap: 0;
+}
+.sidebar-logo {
+  font-family: var(--ff-hand); font-size: 18px; color: var(--teal);
+  writing-mode: vertical-rl; letter-spacing: 0.08em;
+  margin-bottom: 24px; font-weight: 700;
+}
+.sidebar-divider { width: 32px; height: 1px; background: var(--border); margin: 8px 0; }
+.nav-tab {
+  width: 44px; padding: 12px 0;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  cursor: pointer; border-radius: 10px; transition: background .2s;
+  margin: 2px 0; text-decoration: none;
+}
+.nav-tab:hover  { background: var(--teal-pale); }
+.nav-tab.active { background: var(--teal-pale); }
+.nav-tab .icon  { font-size: 18px; line-height: 1; }
+.nav-tab .label { font-size: 9px; color: var(--ink-lt); font-family: var(--ff-sans); font-weight: 500; text-align: center; line-height: 1.2; }
+.nav-tab.active .label { color: var(--teal); font-weight: 700; }
+
+/* ── MAIN ── */
+.main { flex: 1; padding: 0 0 60px; overflow-x: hidden; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--white); border-bottom: 1.5px solid var(--border);
+  padding: 28px 36px 24px;
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 20px; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--teal), var(--amber), var(--lavender));
+}
+.hero-tag {
+  display: inline-block; background: var(--teal-pale); color: var(--teal);
+  border: 1px solid var(--teal-lt); border-radius: 20px;
+  padding: 3px 12px; font-size: 11px; font-family: var(--ff-en);
+  letter-spacing: 0.06em; margin-bottom: 10px; font-weight: 600;
+}
+.hero-title { font-family: var(--ff-serif); font-size: 28px; font-weight: 700; color: var(--ink); margin-bottom: 4px; line-height: 1.3; }
+.hero-sub { font-family: var(--ff-hand); font-size: 15px; color: var(--ink-lt); line-height: 1.6; }
+.hero-stamps { display: flex; gap: 12px; flex-shrink: 0; align-items: flex-end; }
+.stamp { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+.stamp-circle {
+  width: 68px; height: 68px; border-radius: 50%; border: 2.5px solid;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;
+}
+.stamp-circle::after {
+  content: ''; position: absolute; inset: 3px; border-radius: 50%;
+  border: 1px solid; border-color: inherit; opacity: .4;
+}
+.stamp-circle.teal   { border-color: var(--teal);    color: var(--teal); }
+.stamp-circle.amber  { border-color: var(--amber);   color: var(--amber); }
+.stamp-circle.lav    { border-color: var(--lavender); color: var(--lavender); }
+.stamp-emoji { font-size: 22px; line-height: 1; }
+.stamp-text  { font-family: var(--ff-hand); font-size: 10px; font-weight: 700; margin-top: 1px; }
+.stamp-label { font-size: 10px; color: var(--ink-pale); font-family: var(--ff-sans); margin-top: 4px; }
+
+/* ── SECTION COMMON ── */
+.section { padding: 32px 36px; border-bottom: 1px dashed var(--border); }
+.section-head { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+.section-stamp-mini {
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 2px solid var(--teal); display: flex; align-items: center;
+  justify-content: center; font-size: 18px; flex-shrink: 0; color: var(--teal); background: var(--white);
+}
+.section-title { font-family: var(--ff-serif); font-size: 18px; font-weight: 700; color: var(--ink); }
+.section-en { font-family: var(--ff-hand); font-size: 13px; color: var(--ink-pale); margin-left: 2px; }
+
+/* ── SUMMARY CARDS ── */
+.summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.sum-card {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 6px;
+}
+.sum-card-emoji { font-size: 22px; color: var(--teal); line-height: 1; }
+.sum-card-label { font-size: 10px; color: var(--ink-pale); font-family: var(--ff-en); letter-spacing: 0.08em; text-transform: uppercase; }
+.sum-card-value { font-family: var(--ff-serif); font-size: 15px; color: var(--ink); font-weight: 700; line-height: 1.3; }
+.sum-card-sub   { font-family: var(--ff-hand); font-size: 13px; color: var(--ink-lt); }
+
+/* ── CITY DIVIDER ── */
+.city-divider {
+  display: flex; align-items: center; gap: 10px;
+  margin: 24px 0 16px; padding: 0 4px;
+}
+.city-dot {
+  width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+}
+.city-dot.gz  { background: var(--teal); }
+.city-dot.zs  { background: var(--amber); }
+.city-dot.mo  { background: var(--lavender); }
+.city-label {
+  font-family: var(--ff-serif); font-size: 13px; font-weight: 700; white-space: nowrap;
+}
+.city-label.gz  { color: var(--teal); }
+.city-label.zs  { color: var(--amber); }
+.city-label.mo  { color: var(--lavender); }
+.city-en {
+  font-family: var(--ff-en); font-size: 11px; color: var(--ink-pale); white-space: nowrap;
+}
+.city-days {
+  font-family: var(--ff-hand); font-size: 11px; color: var(--ink-pale);
+  background: var(--cream); border: 1px solid var(--border);
+  border-radius: 10px; padding: 1px 8px; white-space: nowrap;
+}
+.city-line { flex: 1; height: 1px; background: var(--border); }
+
+/* ── ITINERARY ── */
+.day-block { margin-bottom: 24px; }
+.day-block:last-child { margin-bottom: 0; }
+.day-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.day-badge {
+  width: 48px; height: 48px; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-family: var(--ff-hand); font-weight: 700; flex-shrink: 0; border: 2px solid;
+}
+.day-badge.d1 { background: var(--teal-pale);  border-color: var(--teal);     color: var(--teal); }
+.day-badge.d2 { background: var(--lav-pale);   border-color: var(--lavender); color: #8880A4; }
+.day-badge.d3 { background: var(--amber-pale); border-color: var(--amber);    color: var(--amber); }
+.day-badge.d4 { background: var(--rose-pale);  border-color: var(--rose);     color: #A88898; }
+.day-badge.d5 { background: var(--jade-pale);  border-color: var(--jade);     color: #5A9B96; }
+.day-badge-day { font-size: 9px; line-height: 1; }
+.day-badge-num { font-size: 18px; line-height: 1; }
+.day-title { font-family: var(--ff-serif); font-size: 16px; font-weight: 700; color: var(--ink); }
+.day-date  { font-family: var(--ff-hand); font-size: 13px; color: var(--ink-pale); }
+
+.timeline { position: relative; padding-left: 20px; }
+.timeline::before {
+  content: ''; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 1.5px;
+  background: repeating-linear-gradient(180deg, var(--border) 0, var(--border) 6px, transparent 6px, transparent 10px);
+}
+.tl-item { display: flex; gap: 14px; margin-bottom: 12px; position: relative; }
+.tl-item:last-child { margin-bottom: 0; }
+.tl-dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--white); border: 2px solid var(--teal); flex-shrink: 0;
+  margin-top: 3px; position: relative; left: -20px; margin-right: -14px;
+}
+.tl-card {
+  flex: 1; background: var(--white); border: 1.5px solid var(--border);
+  border-radius: 12px; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start;
+}
+.tl-card-thumb {
+  width: 56px; height: 56px; border-radius: 8px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--teal);
+}
+.tl-card-thumb.food   { background: #F0EEF4; color: var(--lavender); }
+.tl-card-thumb.shop   { background: #EAEAF0; color: var(--lavender); }
+.tl-card-thumb.sight  { background: var(--teal-pale); color: var(--teal); }
+.tl-card-thumb.hotel  { background: var(--rose-pale); color: var(--rose); }
+.tl-card-thumb.trans  { background: #EAE4F2; color: var(--ink-lt); }
+.tl-card-thumb.hist   { background: var(--amber-pale); color: var(--amber); }
+.tl-card-thumb.tech   { background: var(--jade-pale); color: var(--jade); }
+.tl-card-thumb.event  { background: #F0EEF4; color: #9888CC; }
+.tl-card-body { flex: 1; }
+.tl-card-time { font-family: var(--ff-hand); font-size: 12px; color: var(--ink-pale); margin-bottom: 2px; }
+.tl-card-name { font-family: var(--ff-serif); font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.tl-card-note { font-size: 12px; color: var(--ink-lt); line-height: 1.6; font-family: var(--ff-sans); }
+.tl-card-tags { display: flex; gap: 5px; margin-top: 6px; flex-wrap: wrap; }
+.tl-card-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+
+.chip { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-family: var(--ff-en); font-weight: 600; letter-spacing: 0.04em; }
+.chip.teal   { background: var(--teal-pale);  color: var(--teal); }
+.chip.lav    { background: var(--lav-pale);   color: #8880A4; }
+.chip.yel    { background: #EEEADC;           color: #8A7848; }
+.chip.rose   { background: var(--rose-pale);  color: #A88898; }
+.chip.gray   { background: #E2E0E8;           color: #5F5A6B; }
+.chip.amber  { background: var(--amber-pale); color: #8A6830; }
+.chip.jade   { background: var(--jade-pale);  color: #4A8A85; }
+
+.card-action-btn {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 7px 12px; font-size: 12.5px; font-weight: 600;
+  background: var(--cream); color: var(--ink);
+  border: 1.5px solid rgba(0,0,0,0.15); border-radius: 8px;
+  text-decoration: none; font-family: var(--ff-sans); cursor: pointer;
+  transition: all 0.15s; -webkit-tap-highlight-color: transparent;
+}
+.card-action-btn:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+
+/* ── ACCOMMODATION ── */
+.hotel-section-label {
+  font-family: var(--ff-hand); font-size: 14px; font-weight: 700;
+  color: var(--ink-lt); margin: 18px 0 10px; letter-spacing: 0.05em;
+  display: flex; align-items: center; gap: 8px;
+}
+.hotel-section-label::before {
+  content: ''; display: inline-block; width: 3px; height: 1em;
+  background: var(--teal); border-radius: 3px;
+}
+.hotel-section-label.zhongshan::before { background: var(--amber); }
+.hotel-card {
+  background: var(--white); border: 1.5px solid var(--border); border-radius: 16px;
+  padding: 20px 22px; display: flex; gap: 18px; align-items: flex-start; margin-bottom: 12px;
+}
+.hotel-card:last-child { margin-bottom: 0; }
+.hotel-thumb {
+  width: 80px; height: 80px; border-radius: 12px;
+  background: var(--rose-pale); display: flex; align-items: center;
+  justify-content: center; font-size: 36px; flex-shrink: 0;
+}
+.hotel-body { flex: 1; }
+.hotel-name { font-family: var(--ff-serif); font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.hotel-score {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: var(--teal-pale); color: var(--teal); font-weight: 700;
+  font-size: 13px; padding: 2px 10px; border-radius: 10px; margin-bottom: 6px;
+  font-family: var(--ff-hand);
+}
+.hotel-score.amber { background: var(--amber-pale); color: var(--amber); }
+.hotel-meta { font-size: 12px; color: var(--ink-lt); line-height: 1.9; font-family: var(--ff-sans); }
+.hotel-meta span { display: inline-flex; align-items: center; gap: 4px; margin-right: 14px; }
+.hotel-chips { margin-top: 8px; display: flex; gap: 6px; flex-wrap: wrap; }
+.hotel-note {
+  background: var(--teal-pale); border-left: 3px solid var(--teal-lt);
+  border-radius: 0 8px 8px 0; padding: 8px 12px;
+  font-family: var(--ff-hand); font-size: 13px; color: #506878; margin-top: 10px; line-height: 1.5;
+}
+.hotel-actions { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ── FOOD ── */
+.food-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.food-item {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: 12px; padding: 14px 16px; display: flex; gap: 12px; align-items: flex-start;
+}
+.food-emoji { font-size: 28px; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+.food-name  { font-family: var(--ff-serif); font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 3px; }
+.food-area  { font-family: var(--ff-hand); font-size: 13px; color: var(--ink-pale); margin-bottom: 4px; }
+.food-note  { font-size: 11px; color: var(--ink-lt); line-height: 1.6; font-family: var(--ff-sans); }
+.food-must {
+  display: inline-block; background: #EEEADC; border: 1px solid var(--yel-deep);
+  color: #8A7848; border-radius: 8px; padding: 1px 7px;
+  font-size: 10px; font-family: var(--ff-hand); font-weight: 700; margin-top: 5px;
+}
+.food-day-badge {
+  display: inline-block; background: var(--teal-pale); color: var(--teal);
+  border-radius: 8px; padding: 1px 7px; font-size: 10px; font-family: var(--ff-en); font-weight: 600; margin-top: 5px;
+}
+
+/* ── NOTES ── */
+.notes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.note-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 16px 18px; }
+.note-card-title {
+  font-family: var(--ff-hand); font-size: 16px; font-weight: 700; color: var(--teal);
+  margin-bottom: 10px; display: flex; align-items: center; gap: 6px;
+}
+.note-card-title.amber { color: var(--amber); }
+.note-card-title.lav   { color: var(--lavender); }
+.note-list { list-style: none; }
+.note-list li {
+  font-size: 13px; color: var(--ink); line-height: 1.8;
+  font-family: var(--ff-sans); padding-left: 16px; position: relative;
+}
+.note-list li::before { content: '✦'; position: absolute; left: 0; color: var(--teal-lt); font-size: 9px; top: 4px; }
+.note-list li strong  { color: var(--ink); font-weight: 700; }
+.note-alert {
+  background: #FFF3E0; border-left: 3px solid var(--amber);
+  border-radius: 0 8px 8px 0; padding: 8px 12px;
+  font-family: var(--ff-hand); font-size: 14px; color: #806040; margin-top: 10px; line-height: 1.5;
+}
+
+/* ── PACKING ── */
+.pack-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.pack-col { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+.pack-col-title {
+  font-family: var(--ff-hand); font-size: 15px; font-weight: 700; color: var(--lavender);
+  margin-bottom: 10px; border-bottom: 1px dashed var(--lav-pale);
+  padding-bottom: 6px; display: flex; align-items: center; gap: 5px;
+}
+.check-item {
+  display: flex; align-items: flex-start; gap: 8px; padding: 5px 0;
+  font-size: 13px; color: var(--ink); font-family: var(--ff-sans);
+  line-height: 1.4; border-bottom: 1px solid #E2E0E8;
+}
+.check-item:last-child { border-bottom: none; }
+.checkbox {
+  width: 16px; height: 16px; border: 1.5px solid var(--lavender); border-radius: 4px;
+  flex-shrink: 0; margin-top: 1px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; transition: all .2s;
+}
+.checkbox.checked { background: var(--lavender); border-color: var(--lavender); }
+.checkbox.checked::after { content: '✓'; color: white; font-size: 10px; font-weight: 700; }
+.check-important { color: #c14d4d; font-weight: 700; font-size: 11px; margin-left: 2px; }
+.check-note { color: var(--teal); font-size: 11px; margin-left: 4px; opacity: .85; }
+
+/* IG REELS */
+.reels-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px,1fr)); gap:14px; }
+.reel-card { border-radius:14px; overflow:hidden; border:1.5px solid var(--border); background:#fff; display:flex; flex-direction:column; }
+.reel-thumb { height:120px; display:flex; align-items:center; justify-content:center; font-size:2.2rem; flex-shrink:0; position:relative; }
+.reel-thumb-tag { position:absolute; top:8px; left:8px; font-size:9px; font-weight:700; letter-spacing:.04em; padding:2px 7px; border-radius:20px; }
+.reel-body { padding:12px 14px 14px; display:flex; flex-direction:column; gap:6px; flex:1; }
+.reel-handle { font-size:10px; color:var(--ink-lt); font-family:var(--ff-sans); font-weight:500; }
+.reel-handle::before { content:"@"; }
+.reel-title { font-size:13px; font-weight:700; color:var(--ink); line-height:1.45; }
+.reel-desc { font-size:11.5px; color:var(--ink-lt); line-height:1.65; flex:1; }
+.reel-food-list { list-style:none; padding:0; margin:4px 0 0; display:flex; flex-direction:column; gap:3px; }
+.reel-food-list li { font-size:11px; color:var(--ink); display:flex; gap:6px; align-items:baseline; }
+.reel-food-list li .rfl-name { font-weight:600; }
+.reel-food-list li .rfl-hours { color:var(--ink-lt); font-size:10px; }
+.reel-actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+.reel-btn { font-size:11px; font-family:var(--ff-sans); font-weight:600; padding:4px 12px; border-radius:20px; text-decoration:none; border:1px solid currentColor; transition:opacity .15s; }
+.reel-btn:hover { opacity:.7; }
+.reels-group-title { grid-column:1/-1; font-size:10.5px; font-weight:700; color:var(--ink-lt); letter-spacing:.08em; text-transform:uppercase; padding:10px 0 6px; border-bottom:1.5px dashed var(--border); margin-top:4px; display:flex; align-items:center; gap:8px; }
+.reels-group-title:first-child { margin-top:0; padding-top:0; }
+.reel-platform { display:inline-flex; align-items:center; gap:3px; font-size:9px; font-weight:700; padding:2px 7px; border-radius:10px; margin-left:auto; }
+.reel-platform.xhs { background:#FFE8E6; color:#C84040; }
+.reel-platform.ig  { background:#F4E8F8; color:#C589A8; }
+
+/* ── COPY BUTTON ── */
+.copy-btn {
+  display: inline-flex; align-items: center; margin-left: 6px;
+  padding: 2px 8px; font-size: 11px; background: rgba(0,0,0,0.05);
+  color: var(--ink); border: 1px solid rgba(0,0,0,0.12); border-radius: 6px;
+  cursor: pointer; font-family: var(--ff-sans); transition: all 0.15s;
+  -webkit-tap-highlight-color: transparent; white-space: nowrap; vertical-align: middle;
+}
+.copy-btn:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+.copy-toast {
+  position: fixed; top: 20px; left: 50%;
+  transform: translateX(-50%) translateY(-120px);
+  background: rgba(0,0,0,0.88); color: #fff;
+  padding: 12px 22px; border-radius: 10px; font-size: 14px;
+  font-family: var(--ff-sans); z-index: 9999; transition: transform 0.3s ease;
+  pointer-events: none; max-width: 86%; text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+.copy-toast.show { transform: translateX(-50%) translateY(0); }
+
+/* ── FOOTER ── */
+.footer { padding: 32px 36px; display: flex; align-items: center; justify-content: space-between; }
+.footer-hand { font-family: var(--ff-hand); font-size: 16px; color: var(--ink-pale); }
+.footer-stamp {
+  width: 72px; height: 72px; border-radius: 50%; border: 2.5px solid var(--teal);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: var(--teal); opacity: .6; position: relative;
+}
+.footer-stamp::after { content: ''; position: absolute; inset: 4px; border-radius: 50%; border: 1px solid var(--teal); }
+.footer-stamp-emoji { font-size: 24px; }
+.footer-stamp-text  { font-family: var(--ff-hand); font-size: 9px; font-weight: 700; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 760px) {
+  .sidebar { display: none; }
+  .hero { flex-direction: column; align-items: flex-start; }
+  .hero-stamps { align-self: flex-end; }
+  .summary-grid { grid-template-columns: 1fr 1fr; }
+  .food-grid    { grid-template-columns: 1fr; }
+  .notes-grid   { grid-template-columns: 1fr; }
+  .pack-cols    { grid-template-columns: 1fr; }
+  .section { padding: 24px 20px; }
+  .hero    { padding: 20px 20px 18px; }
+  .tl-card-name { font-size: 16px; }
+  .tl-card-note { font-size: 14px; line-height: 1.7; }
+  .hotel-name   { font-size: 18px; }
+  .hotel-meta   { font-size: 14px; line-height: 1.75; }
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--teal-lt); border-radius: 10px; }
+</style>
+</head>
+<body>
+
+<div id="copy-toast" class="copy-toast"></div>
+
+<div class="shell">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="sidebar-logo">粵行</div>
+    <div class="sidebar-divider"></div>
+    <a class="nav-tab active" href="#overview">
+      <span class="icon"><i class="ph ph-note-blank"></i></span>
+      <span class="label">總覽</span>
+    </a>
+    <a class="nav-tab" href="#itinerary">
+      <span class="icon"><i class="ph ph-map-trifold"></i></span>
+      <span class="label">行程</span>
+    </a>
+    <a class="nav-tab" href="#accommodation">
+      <span class="icon"><i class="ph ph-bed"></i></span>
+      <span class="label">住宿</span>
+    </a>
+    <a class="nav-tab" href="#food">
+      <span class="icon"><i class="ph ph-fork-knife"></i></span>
+      <span class="label">美食</span>
+    </a>
+    <a class="nav-tab" href="#reels">
+      <span class="icon"><i class="ph ph-instagram-logo"></i></span>
+      <span class="label">IG 存</span>
+    </a>
+    <a class="nav-tab" href="#notes">
+      <span class="icon"><i class="ph ph-notebook"></i></span>
+      <span class="label">筆記</span>
+    </a>
+    <a class="nav-tab" href="#packing">
+      <span class="icon"><i class="ph ph-suitcase-rolling"></i></span>
+      <span class="label">行李</span>
+    </a>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HERO -->
+    <div class="hero" id="overview">
+      <div class="hero-left">
+        <div class="hero-tag">✈ GUANGDONG STUDY TOUR · JUN 2026</div>
+        <h1 class="hero-title">粵行手帳</h1>
+        <div class="hero-sub">「粵向山海·承先生志」兩岸青年研學<br>廣州 · 中山 · 澳門 ☁️</div>
+      </div>
+      <div class="hero-stamps">
+        <div class="stamp">
+          <div class="stamp-circle teal">
+            <span class="stamp-emoji"><i class="ph ph-airplane-takeoff"></i></span>
+            <span class="stamp-text">6.25</span>
+          </div>
+          <span class="stamp-label">出發</span>
+        </div>
+        <div class="stamp">
+          <div class="stamp-circle amber">
+            <span class="stamp-emoji">🏛️</span>
+            <span class="stamp-text">三城</span>
+          </div>
+          <span class="stamp-label">城市</span>
+        </div>
+        <div class="stamp">
+          <div class="stamp-circle lav">
+            <span class="stamp-emoji"><i class="ph ph-moon-stars"></i></span>
+            <span class="stamp-text">4夜</span>
+          </div>
+          <span class="stamp-label">住宿</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUMMARY CARDS -->
+    <section class="section" id="overview-summary">
+      <div class="summary-grid">
+        <div class="sum-card">
+          <span class="sum-card-emoji"><i class="ph ph-calendar-dots"></i></span>
+          <span class="sum-card-label">Trip Dates</span>
+          <span class="sum-card-value">6/25 – 6/29</span>
+          <span class="sum-card-sub">五天四夜</span>
+        </div>
+        <div class="sum-card">
+          <span class="sum-card-emoji"><i class="ph ph-path"></i></span>
+          <span class="sum-card-label">Route</span>
+          <span class="sum-card-value">廣州 → 中山 → 澳門</span>
+          <span class="sum-card-sub">深中通道過渡</span>
+        </div>
+        <div class="sum-card">
+          <span class="sum-card-emoji"><i class="ph ph-bed"></i></span>
+          <span class="sum-card-label">Accommodation</span>
+          <span class="sum-card-value">亞朵 / 璞頓 + 希爾頓</span>
+          <span class="sum-card-sub">廣州 2 晚 · 中山 2 晚</span>
+        </div>
+        <div class="sum-card">
+          <span class="sum-card-emoji"><i class="ph ph-bus"></i></span>
+          <span class="sum-card-label">Transport</span>
+          <span class="sum-card-value">大巴車</span>
+          <span class="sum-card-sub">全程統一接送</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ITINERARY -->
+    <section class="section" id="itinerary">
+      <div class="section-head">
+        <div class="section-stamp-mini"><i class="ph ph-map-trifold"></i></div>
+        <div>
+          <div class="section-title">每日行程</div>
+          <div class="section-en">Day-by-Day Itinerary</div>
+        </div>
+      </div>
+
+      <!-- ── 廣州 ── -->
+      <div class="city-divider">
+        <span class="city-dot gz"></span>
+        <span class="city-label gz">廣州</span>
+        <span class="city-en">Guangzhou</span>
+        <span class="city-days">Day 1–2 · 6/25–26</span>
+        <span class="city-line"></span>
+      </div>
+
+      <!-- DAY 1 -->
+      <div class="day-block">
+        <div class="day-header">
+          <div class="day-badge d1"><span class="day-badge-day">DAY</span><span class="day-badge-num">1</span></div>
+          <div>
+            <div class="day-title">廣州抵達日</div>
+            <div class="day-date">6 月 25 日（四）</div>
+          </div>
+        </div>
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb trans"><i class="ph ph-flag"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">15:00 – 15:30</div>
+                <div class="tl-card-name">集結・領取統一服裝</div>
+                <div class="tl-card-note">全員集合，大會發放統一服裝。請準時到場，後續行程緊接出發。</div>
+                <div class="tl-card-tags"><span class="chip gray">集合</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb hist"><i class="ph ph-bank"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">15:30 – 16:30</div>
+                <div class="tl-card-name">中山紀念堂</div>
+                <div class="tl-card-note">紀念孫中山先生而建，1931年落成，廣州地標建築。八角形宮殿式設計融合中西風格。路程約15分鐘。</div>
+                <div class="tl-card-tags"><span class="chip amber">歷史</span><span class="chip teal">景點</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=广州中山纪念堂" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb food"><i class="ph ph-fork-knife"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">17:00 – 19:15</div>
+                <div class="tl-card-name">歡迎晚宴｜半島太子酒家</div>
+                <div class="tl-card-note">
+                  📍 沿江東路 418 號港灣廣場海港城商場 5 樓（近大沙頭碼頭）
+                  <button class="copy-btn" data-copy="广州市越秀区沿江东路418号港湾广场海港城商场5楼 半岛太子酒家">複製地址</button><br>
+                  🍽️ 傳統粵菜・推車點心模式・環境寬敞可辦宴會<br>
+                  ⭐ 推薦：白灼牛肉丸、雜菌餃、豬腸粉
+                </div>
+                <div class="tl-card-tags"><span class="chip lav">粵菜</span><span class="chip teal">歡迎晚宴</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=半岛太子酒家+沿江东路" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
+                  <a href="https://tw.trip.com/restaurant/china/guangzhou/detail/bandao-taizi-restaurant-221088/" target="_blank" rel="noopener" class="card-action-btn">📖 Trip.com 評價</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb sight"><i class="ph ph-boat"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">19:30 – 20:30</div>
+                <div class="tl-card-name">珠江夜遊</div>
+                <div class="tl-card-note">大沙頭遊船碼頭出發。夜色中珠江兩岸燈光璀璨，廣州塔小蠻腰點燈，絕佳拍照時機。路程約15分鐘。</div>
+                <div class="tl-card-tags"><span class="chip teal">夜遊</span><span class="chip yel">必拍</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=大沙头游船码头" target="_blank" rel="noopener" class="card-action-btn">📍 碼頭位置</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card" style="border-color:#E8E0F0;">
+              <div class="tl-card-thumb" style="background:#F0ECF8;color:#A898C8;"><i class="ph ph-cup"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">20:45（夜遊後・回程順路）🆓 個人自由</div>
+                <div class="tl-card-name">霸王茶姬 ／ 喜茶 🧋</div>
+                <div class="tl-card-note">廣州塔 / 琶洲商圈兩家都有，邊走邊喝回酒店。<br>🍵 <strong>霸王茶姬</strong>推薦：伯牙絕弦（茉莉拿鐵）、道可道<br>🫖 <strong>喜茶</strong>推薦：多肉葡萄、芝芝莓莓、生打椰</div>
+                <div class="tl-card-tags"><span class="chip lav">飲料</span><span class="chip yel">自由</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=霸王茶姬+琶洲+广州" target="_blank" rel="noopener" class="card-action-btn">🍵 霸王茶姬</a>
+                  <a href="https://map.baidu.com/?newmap=1&wd=喜茶+琶洲+广州" target="_blank" rel="noopener" class="card-action-btn">🫖 喜茶</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb hotel"><i class="ph ph-bed"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">21:00</div>
+                <div class="tl-card-name">入住廣州酒店</div>
+                <div class="tl-card-note">廣州塔海心橋亞朵 / 廣州塔琶洲會展亞朵S / 璞頓 the PROTONS（暫定，三選一）</div>
+                <div class="tl-card-tags"><span class="chip rose">住宿</span><span class="chip teal">廣州</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /DAY 1 -->
+
+      <!-- DAY 2 -->
+      <div class="day-block">
+        <div class="day-header">
+          <div class="day-badge d2"><span class="day-badge-day">DAY</span><span class="day-badge-num">2</span></div>
+          <div>
+            <div class="day-title">廣州深度探索</div>
+            <div class="day-date">6 月 26 日（五）</div>
+          </div>
+        </div>
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-dot" style="border-color:var(--lavender);"></div>
+            <div class="tl-card" style="border-color:var(--lav-pale);">
+              <div class="tl-card-thumb sight"><i class="ph ph-graduation-cap"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">9:00 集合 → 9:30 – 11:00</div>
+                <div class="tl-card-name">中山大學參訪・學術交流</div>
+                <div class="tl-card-note">
+                  打卡中山大學地標（牌坊、中山像、黑石屋），與中山大學學者及學生交流。<br>
+                  📍 海珠區新港西路 135 號｜酒店出發路程約 10 分鐘
+                  <button class="copy-btn" data-copy="广州市海珠区新港西路135号 中山大学">複製地址</button>
+                </div>
+                <div class="tl-card-tags"><span class="chip lav">學術</span><span class="chip teal">景點</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=中山大学南校园" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot" style="border-color:var(--yel-deep);"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb food"><i class="ph ph-fork-knife"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">11:30 – 12:30</div>
+                <div class="tl-card-name">午餐｜向群飯店二沙島店</div>
+                <div class="tl-card-note">廣州老字號粵菜館，二沙島環境優美，臨珠江而坐。路程約15分鐘。</div>
+                <div class="tl-card-tags"><span class="chip yel">午餐</span><span class="chip lav">粵菜</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=向群饭店二沙岛店" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb hist"><i class="ph ph-shield-star"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">13:30 – 14:30</div>
+                <div class="tl-card-name">黃埔軍校</div>
+                <div class="tl-card-note">
+                  中國近代史重要軍事學校遺址，孫中山親創，蔣介石任校長，培育無數國共將領。<br>
+                  📍 黃埔區長洲島軍校路 170 號｜路程約 1 小時
+                  <button class="copy-btn" data-copy="广州市黄埔区长洲岛军校路170号 黄埔军校旧址">複製地址</button>
+                </div>
+                <div class="tl-card-tags"><span class="chip amber">歷史</span><span class="chip teal">景點</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=黄埔军校旧址纪念馆" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb tech"><i class="ph ph-drone"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">15:30 – 16:30</div>
+                <div class="tl-card-name">億航無人機參訪</div>
+                <div class="tl-card-note">
+                  EHang（億航智能），全球首家商業載人無人機企業，已取得全球首張 eVTOL 型號合格證。<br>
+                  路程約 1 小時
+                </div>
+                <div class="tl-card-tags"><span class="chip jade">科技</span><span class="chip teal">企業參訪</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb sight"><i class="ph ph-theater-masks"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">17:30 – 18:30</div>
+                <div class="tl-card-name">粵劇博物館</div>
+                <div class="tl-card-note">
+                  廣州市荔灣區恩寧路，坐落嶺南傳統建築群中，常態展示粵劇服裝、道具、歷史。
+                  <button class="copy-btn" data-copy="广州市荔湾区恩宁路127号 粤剧艺术博物馆">複製地址</button>
+                </div>
+                <div class="tl-card-tags"><span class="chip lav">文化</span><span class="chip teal">博物館</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=粤剧艺术博物馆" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb shop"><i class="ph ph-storefront"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">18:30 – 20:30</div>
+                <div class="tl-card-name">永慶坊・自由晚餐 🍽️</div>
+                <div class="tl-card-note">
+                  廣州歷史文化步行街，修繕老建築融入現代創意。周邊美食雲集：陳添記魚皮、銀記腸粉、亞強甜品。<br>
+                  📍 荔灣區恩寧路 37 號（粵劇博物館斜對面）
+                </div>
+                <div class="tl-card-tags"><span class="chip yel">自由晚餐</span><span class="chip teal">打卡</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=永庆坊+广州" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card" style="border-color:#FDECD8;">
+              <div class="tl-card-thumb food" style="background:#FDE8D0;color:#C06030;"><i class="ph ph-shrimp"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">18:30 – 19:45 🆓 個人自由</div>
+                <div class="tl-card-name">小龍蝦晚餐 🦞</div>
+                <div class="tl-card-note">
+                  永慶坊周邊夏夜小龍蝦正當季！廣州麻辣小龍蝦口味比北方更鮮甜。<br>
+                  🔥 點法：十三香 / 蒜蓉 / 麻辣三選一，配冰鎮啤酒最對味<br>
+                  📍 推薦找「永慶坊夜市」或「荔灣區宵夜街」巷子裡的現炒攤
+                </div>
+                <div class="tl-card-tags"><span class="chip amber">必吃</span><span class="chip yel">夏季限定</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=小龙虾+永庆坊+广州" target="_blank" rel="noopener" class="card-action-btn">🦞 找小龍蝦</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card" style="border-color:#EAE8F2;">
+              <div class="tl-card-thumb shop" style="background:#ECEAF8;color:#9080C0;"><i class="ph ph-storefront"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">19:45 – 20:30 🆓 個人自由</div>
+                <div class="tl-card-name">Miniso 名創優品 🛍️</div>
+                <div class="tl-card-note">
+                  永慶坊走出來、荔灣廣場或附近商場必有分店。<br>
+                  💡 廣州門市品項比台灣更齊全，限定聯名款（三麗鷗、迪士尼、Chiikawa）可找找
+                </div>
+                <div class="tl-card-tags"><span class="chip lav">購物</span><span class="chip yel">自由</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=名创优品+荔湾+广州" target="_blank" rel="noopener" class="card-action-btn">🛍️ 找 Miniso</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb hotel"><i class="ph ph-moon-stars"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">20:30</div>
+                <div class="tl-card-name">返回酒店</div>
+                <div class="tl-card-note">翌日 8:00 準時集合，路程 30 分鐘前往黃花崗。</div>
+                <div class="tl-card-tags"><span class="chip rose">住宿</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card" style="border-color:#F0EAF4;">
+              <div class="tl-card-thumb" style="background:#F4EEF8;color:#A878C0;"><i class="ph ph-hand-waving"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">21:00 – 22:30（回酒店後）🆓 個人自由</div>
+                <div class="tl-card-name">頭療 ✨ 廣式洗頭按摩</div>
+                <div class="tl-card-note">
+                  廣州頭療文化超盛行，洗頭 + 頭皮按摩 + 採耳一條龍約 60–90 分鐘，¥60–120 左右。<br>
+                  🔑 關鍵詞：「頭療館」或「頭皮護理」，廣州塔商圈 / 琶洲附近有不少連鎖店。<br>
+                  📱 可用美團 / 大眾點評 APP 搜「頭療」看評價再預約
+                </div>
+                <div class="tl-card-tags"><span class="chip lav">SPA</span><span class="chip teal">放鬆</span><span class="chip yel">必體驗</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=头疗+琶洲+广州" target="_blank" rel="noopener" class="card-action-btn">💆 找頭療館</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /DAY 2 -->
+
+      <!-- ── 廣州→中山 ── -->
+      <div class="city-divider">
+        <span class="city-dot gz"></span>
+        <span class="city-label gz">廣州</span>
+        <span style="font-size:12px;color:var(--ink-pale);margin:0 4px;">→</span>
+        <span class="city-dot zs"></span>
+        <span class="city-label zs">中山</span>
+        <span class="city-en">Guangzhou → Zhongshan</span>
+        <span class="city-days">Day 3 · 6/27</span>
+        <span class="city-line"></span>
+      </div>
+
+      <!-- DAY 3 -->
+      <div class="day-block">
+        <div class="day-header">
+          <div class="day-badge d3"><span class="day-badge-day">DAY</span><span class="day-badge-num">3</span></div>
+          <div>
+            <div class="day-title">廣州收尾・南下中山</div>
+            <div class="day-date">6 月 27 日（六）</div>
+          </div>
+        </div>
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-dot" style="border-color:var(--amber);"></div>
+            <div class="tl-card" style="border-color:var(--amber-pale);">
+              <div class="tl-card-thumb hist"><i class="ph ph-flower"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">8:00 集合 → 8:30 – 9:30</div>
+                <div class="tl-card-name">黃花崗七十二烈士墓・祭拜先賢</div>
+                <div class="tl-card-note">
+                  1911 年廣州起義中犧牲的 72 位革命先烈長眠於此，是本次研學「承先生志」的核心精神場域。<br>
+                  📍 越秀區先烈中路 79 號｜路程約 30 分鐘
+                  <button class="copy-btn" data-copy="广州市越秀区先烈中路79号 黄花岗七十二烈士墓">複製地址</button>
+                </div>
+                <div class="tl-card-tags"><span class="chip amber">歷史</span><span class="chip gray">祭拜</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=黄花岗七十二烈士墓" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb tech"><i class="ph ph-car"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">10:00 – 11:30</div>
+                <div class="tl-card-name">小鵬汽車及機器人參訪</div>
+                <div class="tl-card-note">XPENG 廣州總部，中國頭部電動車及飛行汽車企業。近期發布人形機器人，前沿科技近距離體驗。</div>
+                <div class="tl-card-tags"><span class="chip jade">科技</span><span class="chip teal">企業參訪</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb food"><i class="ph ph-fork-knife"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">12:00 – 13:30</div>
+                <div class="tl-card-name">午餐</div>
+                <div class="tl-card-note">大會安排午餐。</div>
+                <div class="tl-card-tags"><span class="chip yel">午餐</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot" style="border-color:var(--amber);"></div>
+            <div class="tl-card" style="border-color:var(--amber-pale);">
+              <div class="tl-card-thumb trans"><i class="ph ph-bus"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">13:30 出發</div>
+                <div class="tl-card-name">大巴南下中山（經深中通道）</div>
+                <div class="tl-card-note">
+                  🌉 <strong>深中通道</strong>：2024 年 6 月通車的超級工程，深圳→中山跨海大橋隧道，全長 24 公里。<br>
+                  廣州出發約 1.5 小時抵達中山。
+                </div>
+                <div class="tl-card-tags"><span class="chip gray">交通</span><span class="chip amber">深中通道</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb shop"><i class="ph ph-person-simple-walk"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">15:00 – 18:30</div>
+                <div class="tl-card-name">孫文西路步行街・自由晚餐 🍽️</div>
+                <div class="tl-card-note">
+                  中山市最具歷史感的步行街，騎樓建築保存完整，孫中山青年時期常走之路。<br>
+                  中山石岐炒米粉、杏仁餅、中山肉丸別錯過。
+                  <button class="copy-btn" data-copy="中山市石岐区孙文西路步行街">複製地址</button>
+                </div>
+                <div class="tl-card-tags"><span class="chip yel">自由晚餐</span><span class="chip amber">歷史街區</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=孙文西路步行街+中山市" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb hotel"><i class="ph ph-bed"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">18:30</div>
+                <div class="tl-card-name">入住中山利和希爾頓飯店</div>
+                <div class="tl-card-note">📍 中山市東區中山三路 16 號 · 評分 9.4/10 · 456 間客房<br>🛍️ <strong>直連利和廣場購物中心</strong>，內有 <strong>Miniso 名創優品</strong>，入住後逛到飽！</div>
+                <div class="tl-card-tags"><span class="chip rose">住宿</span><span class="chip amber">中山</span><span class="chip lav">連通 Miniso</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /DAY 3 -->
+
+      <!-- ── 中山 ── -->
+      <div class="city-divider">
+        <span class="city-dot zs"></span>
+        <span class="city-label zs">中山</span>
+        <span class="city-en">Zhongshan</span>
+        <span class="city-days">Day 4 · 6/28</span>
+        <span class="city-line"></span>
+      </div>
+
+      <!-- DAY 4 -->
+      <div class="day-block">
+        <div class="day-header">
+          <div class="day-badge d4"><span class="day-badge-day">DAY</span><span class="day-badge-num">4</span></div>
+          <div>
+            <div class="day-title">中山論壇日</div>
+            <div class="day-date">6 月 28 日（日）</div>
+          </div>
+        </div>
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-dot" style="border-color:var(--rose);"></div>
+            <div class="tl-card" style="border-color:var(--rose-pale);">
+              <div class="tl-card-thumb hist"><i class="ph ph-house-line"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">9:00 集合 → 9:30 – 11:00</div>
+                <div class="tl-card-name">孫中山先生故居</div>
+                <div class="tl-card-note">
+                  翠亨村孫中山故居紀念館，孫中山 1866 年出生於此。<br>
+                  📍 中山市南朗鎮翠亨村孫中山故居紀念館
+                  <button class="copy-btn" data-copy="中山市南朗镇翠亨村孙中山故居纪念馆">複製地址</button>
+                </div>
+                <div class="tl-card-tags"><span class="chip amber">歷史</span><span class="chip rose">必訪</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://map.baidu.com/?newmap=1&wd=孙中山故居纪念馆+中山市" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb event"><i class="ph ph-microphone-stage"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">14:00</div>
+                <div class="tl-card-name">中山論壇開幕式</div>
+                <div class="tl-card-note">兩岸青年研學論壇正式開幕。請著統一服裝準時出席。</div>
+                <div class="tl-card-tags"><span class="chip lav">論壇</span><span class="chip gray">正式活動</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb food"><i class="ph ph-trophy"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">18:00 – 20:30</div>
+                <div class="tl-card-name">歡送晚宴・台青分享・頒獎典禮</div>
+                <div class="tl-card-note">
+                  🏆 新媒體短視頻比賽頒獎<br>
+                  🎤 台灣青年代表發言分享<br>
+                  🥂 研學之旅歡送晚宴
+                </div>
+                <div class="tl-card-tags"><span class="chip lav">頒獎</span><span class="chip yel">晚宴</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /DAY 4 -->
+
+      <!-- ── 澳門 ── -->
+      <div class="city-divider">
+        <span class="city-dot mo"></span>
+        <span class="city-label mo">澳門</span>
+        <span class="city-en">Macau</span>
+        <span class="city-days">Day 5 · 6/29</span>
+        <span class="city-line"></span>
+      </div>
+
+      <!-- DAY 5 -->
+      <div class="day-block">
+        <div class="day-header">
+          <div class="day-badge d5"><span class="day-badge-day">DAY</span><span class="day-badge-num">5</span></div>
+          <div>
+            <div class="day-title">澳門探訪・賦歸</div>
+            <div class="day-date">6 月 29 日（一）｜不安排住宿</div>
+          </div>
+        </div>
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-dot" style="border-color:var(--jade);"></div>
+            <div class="tl-card" style="border-color:var(--jade-pale);">
+              <div class="tl-card-thumb trans"><i class="ph ph-passport"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">8:00 集合 → 9:30 – 10:30</div>
+                <div class="tl-card-name">橫琴口岸・入關澳門</div>
+                <div class="tl-card-note">
+                  ⚠️ <strong>入境澳門需帶台灣護照</strong>（台灣護照免簽 30 天）<br>
+                  🚌 中山酒店出發路程約 1.5 小時至橫琴口岸。<br>
+                  📋 入境澳門記得填寫入境卡。
+                </div>
+                <div class="tl-card-tags"><span class="chip jade">入關</span><span class="chip gray">大巴接送</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb sight"><i class="ph ph-graduation-cap"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">10:30 – 12:00</div>
+                <div class="tl-card-name">澳門科技大學・師生交流</div>
+                <div class="tl-card-note">
+                  與澳門台企、台青及澳科大師生交流，了解在澳台商及青年發展機遇。<br>
+                  📍 澳門氹仔島望廈
+                  <button class="copy-btn" data-copy="澳門科技大學 澳門氹仔島望廈">複製地址</button>
+                </div>
+                <div class="tl-card-tags"><span class="chip lav">學術</span><span class="chip jade">澳門</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://maps.google.com/?q=Macau+University+of+Science+and+Technology" target="_blank" rel="noopener" class="card-action-btn">📍 Google Maps</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb food"><i class="ph ph-fork-knife"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">12:00 – 13:30</div>
+                <div class="tl-card-name">午餐</div>
+                <div class="tl-card-note">澳門特色美食機會難得！豬扒包、木糠蛋糕、葡式蛋塔可以找找周邊。路程約 15 分鐘。</div>
+                <div class="tl-card-tags"><span class="chip yel">午餐</span><span class="chip jade">澳門風味</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb hist"><i class="ph ph-building-columns"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">14:00 – 15:30</div>
+                <div class="tl-card-name">澳門國父紀念館</div>
+                <div class="tl-card-note">
+                  孫中山先生在澳門行醫期間的故居，文第士街的葡式建築，紀念館保存大量珍貴文物。<br>
+                  📍 澳門龍嵩正街紀念孫逸仙博士公園旁
+                  <button class="copy-btn" data-copy="澳門國父紀念館 龍嵩正街">複製地址</button>
+                </div>
+                <div class="tl-card-tags"><span class="chip amber">歷史</span><span class="chip jade">澳門</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://maps.google.com/?q=Dr+Sun+Yat-Sen+Memorial+House+Macau" target="_blank" rel="noopener" class="card-action-btn">📍 Google Maps</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card" style="border-color:var(--jade);">
+              <div class="tl-card-thumb" style="background:var(--jade-pale);color:var(--jade);"><i class="ph ph-storefront"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">大會行程結束後（視大巴時間）🆓 個人自由</div>
+                <div class="tl-card-name">大三巴牌坊周邊・美食掃街 🇲🇴</div>
+                <div class="tl-card-note">
+                  大三巴牌坊是澳門地標，周邊步行街滿是葡式特色小吃。回程前抓緊時間逛一圈！<br><br>
+                  🥧 <strong>網紅必吃</strong>：葡式蛋塔（現烤熱的）・金箔雪糕・豬扒包<br><br>
+                  📍 <strong>周邊推薦</strong>（從 IG 存起來）：<br>
+                  • <strong>金美食</strong> 河邊新街 6A　08:00–20:00<br>
+                  • <strong>文記咖啡</strong> 庇山耶街 28　08:00–18:00<br>
+                  • <strong>旺記咖啡</strong>（大三巴店）大炮台街 1-A　10:00–20:00<br>
+                  • <strong>金福龍葡國菜</strong> 吉慶巷 26　11:00–23:00<br>
+                  • <strong>杏香園甜品</strong> 清平直街 13　13:30–00:00
+                </div>
+                <div class="tl-card-tags"><span class="chip jade">澳門</span><span class="chip yel">小吃</span><span class="chip teal">自由</span></div>
+                <div class="tl-card-actions">
+                  <a href="https://maps.google.com/?q=Ruins+of+St.+Paul%27s+Macau" target="_blank" rel="noopener" class="card-action-btn">📍 大三巴牌坊</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb trans"><i class="ph ph-airplane-takeoff"></i></div>
+              <div class="tl-card-body">
+                <div class="tl-card-time">15:30 之後</div>
+                <div class="tl-card-name">返程・從澳門出境</div>
+                <div class="tl-card-note">活動圓滿結束，各自依返程安排離境。請確認個人行程及大巴接送時間。</div>
+                <div class="tl-card-tags"><span class="chip teal">返程</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /DAY 5 -->
+
+    </section><!-- /ITINERARY -->
+
+    <!-- ACCOMMODATION -->
+    <section class="section" id="accommodation">
+      <div class="section-head">
+        <div class="section-stamp-mini" style="border-color:var(--rose);color:var(--rose);"><i class="ph ph-bed"></i></div>
+        <div>
+          <div class="section-title">住宿資訊</div>
+          <div class="section-en">Accommodation · 4 Hotels</div>
+        </div>
+      </div>
+
+      <div class="hotel-section-label">🏙️ 廣州（6/25–27 · 2 晚）— 三選一，暫定</div>
+
+      <!-- 廣州 A -->
+      <div class="hotel-card">
+        <div class="hotel-thumb" style="background:var(--teal-pale);">🏨</div>
+        <div class="hotel-body">
+          <div class="hotel-name">廣州塔海心橋亞朵飯店</div>
+          <div class="hotel-score">⭐ 9.8 / 10 &nbsp;完美</div>
+          <div class="hotel-meta">
+            <span><i class="ph ph-map-pin"></i> 海珠區藝景路 242 號</span>
+            <span><i class="ph ph-door-open"></i> 85 間客房</span>
+            <span><i class="ph ph-calendar-plus"></i> 2026 新開</span>
+          </div>
+          <div class="hotel-chips">
+            <span class="chip teal">機器人服務</span>
+            <span class="chip teal">自助洗衣</span>
+            <span class="chip lav">24hr 餐廳</span>
+            <span class="chip yel">廣州塔旁</span>
+          </div>
+          <div class="hotel-note">✦ 三家中評分最高，2026年新開業，臨近廣州塔地鐵站，服務與衛生口碑極佳。</div>
+          <div class="hotel-actions">
+            <a href="https://www.trip.com/w/HOGXgefv3V2" target="_blank" rel="noopener" class="card-action-btn">🔗 Trip.com 預訂</a>
+            <a href="https://map.baidu.com/?newmap=1&wd=广州塔海心桥亚朵酒店" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 廣州 B -->
+      <div class="hotel-card">
+        <div class="hotel-thumb" style="background:var(--lav-pale);">🏨</div>
+        <div class="hotel-body">
+          <div class="hotel-name">廣州塔琶洲會展亞朵S飯店</div>
+          <div class="hotel-score">⭐ 9.7 / 10 &nbsp;滿意</div>
+          <div class="hotel-meta">
+            <span><i class="ph ph-map-pin"></i> 海珠區新港東路 277 號 20 層</span>
+            <span><i class="ph ph-door-open"></i> 151 間客房</span>
+            <span><i class="ph ph-calendar-plus"></i> 2026 新開</span>
+          </div>
+          <div class="hotel-chips">
+            <span class="chip teal">廣式茶點早餐</span>
+            <span class="chip lav">室內泳池（¥70）</span>
+            <span class="chip yel">隔音佳</span>
+          </div>
+          <div class="hotel-note">✦ 房間數最多（151間），適合大團體分配。早餐口碑超好：「廣式茶點、鮮蝦雲吞麵一次有齊」。</div>
+          <div class="hotel-actions">
+            <a href="https://www.trip.com/w/jdd3xKgv3V2" target="_blank" rel="noopener" class="card-action-btn">🔗 Trip.com 預訂</a>
+            <a href="https://map.baidu.com/?newmap=1&wd=广州塔琶洲会展亚朵S酒店" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 廣州 C -->
+      <div class="hotel-card">
+        <div class="hotel-thumb" style="background:var(--amber-pale);">🏨</div>
+        <div class="hotel-body">
+          <div class="hotel-name">璞頓 the PROTONS（廣州塔琶洲會展店）</div>
+          <div class="hotel-score">⭐ 9.3 / 10 &nbsp;很好</div>
+          <div class="hotel-meta">
+            <span><i class="ph ph-map-pin"></i> 海珠區琶洲大道 78 號</span>
+            <span><i class="ph ph-door-open"></i> 96 間客房</span>
+            <span><i class="ph ph-calendar-plus"></i> 2026 新開</span>
+          </div>
+          <div class="hotel-chips">
+            <span class="chip amber">屋頂無邊際泳池</span>
+            <span class="chip teal">廣州塔全景</span>
+            <span class="chip lav">Dyson 吹風機</span>
+            <span class="chip yel">落地窗景觀</span>
+          </div>
+          <div class="hotel-note">✦ 拍照打卡首選，屋頂泳池 + 廣州塔全景，Dyson 標配。早餐 ¥128/人。</div>
+          <div class="hotel-actions">
+            <a href="https://www.trip.com/w/LBCpHngv3V2" target="_blank" rel="noopener" class="card-action-btn">🔗 Trip.com 預訂</a>
+            <a href="https://map.baidu.com/?newmap=1&wd=璞顿+琶洲+广州" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-section-label zhongshan">🏛️ 中山（6/27–28 · 1–2 晚）</div>
+
+      <!-- 中山 -->
+      <div class="hotel-card">
+        <div class="hotel-thumb" style="background:var(--amber-pale);">🏩</div>
+        <div class="hotel-body">
+          <div class="hotel-name">中山利和希爾頓飯店</div>
+          <div class="hotel-score amber">⭐ 9.4 / 10 &nbsp;極好</div>
+          <div class="hotel-meta">
+            <span><i class="ph ph-map-pin"></i> 中山市東區中山三路 16 號</span>
+            <span><i class="ph ph-door-open"></i> 456 間客房</span>
+            <span><i class="ph ph-star"></i> 6,479 則評論</span>
+          </div>
+          <div class="hotel-chips">
+            <span class="chip amber">連通利和廣場</span>
+            <span class="chip teal">室內溫水泳池</span>
+            <span class="chip lav">5間餐廳酒吧</span>
+            <span class="chip yel">3,600㎡宴會廳</span>
+          </div>
+          <div class="hotel-note">✦ 直連利和廣場購物中心，日式 Omakase / 義式 / 國際自助早餐三選。距中山北站 6.7km，網球場、健身房完備。</div>
+          <div class="hotel-actions">
+            <a href="https://www.trip.com/w/NnAcPyfu3V2" target="_blank" rel="noopener" class="card-action-btn">🔗 Trip.com 預訂</a>
+            <a href="https://map.baidu.com/?newmap=1&wd=中山利和希尔顿酒店" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /ACCOMMODATION -->
+
+    <!-- FOOD -->
+    <section class="section" id="food">
+      <div class="section-head">
+        <div class="section-stamp-mini" style="border-color:var(--yel-deep);color:var(--yel-deep);"><i class="ph ph-fork-knife"></i></div>
+        <div>
+          <div class="section-title">美食清單</div>
+          <div class="section-en">Food Guide · 行程中的滋味</div>
+        </div>
+      </div>
+      <div class="food-grid">
+
+        <div class="food-item">
+          <div class="food-emoji">🍵</div>
+          <div>
+            <div class="food-name">半島太子酒家</div>
+            <div class="food-area">廣州・沿江東路 · 歡迎晚宴</div>
+            <div class="food-note">傳統粵菜推車點心，白灼牛肉丸、雜菌餃、豬腸粉必點。大廳寬敞可辦宴會。</div>
+            <div class="food-day-badge">Day 1 · 晚餐</div>
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-emoji">🍜</div>
+          <div>
+            <div class="food-name">向群飯店二沙島店</div>
+            <div class="food-area">廣州・二沙島 · 正式午餐</div>
+            <div class="food-note">廣州粵菜老字號，二沙島環境優美，鄰珠江而坐，傳統白切雞、蒸魚不容錯過。</div>
+            <div class="food-day-badge">Day 2 · 午餐</div>
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-emoji">🏮</div>
+          <div>
+            <div class="food-name">永慶坊周邊</div>
+            <div class="food-area">廣州・荔灣區 · 自由晚餐</div>
+            <div class="food-note">陳添記魚皮、銀記腸粉、亞強甜品，老廣州夜間街食精華全在這條街。</div>
+            <div class="food-day-badge">Day 2 · 晚餐（自由）</div>
+            <div class="food-must">必吃</div>
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-emoji">🥣</div>
+          <div>
+            <div class="food-name">孫文西路步行街</div>
+            <div class="food-area">中山・石岐區 · 自由晚餐</div>
+            <div class="food-note">石岐炒米粉、中山杏仁餅、中山肉丸、菊花肉——中山本地風味一條街。</div>
+            <div class="food-day-badge">Day 3 · 晚餐（自由）</div>
+            <div class="food-must">必吃</div>
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-emoji">🥚</div>
+          <div>
+            <div class="food-name">澳門葡式蛋塔 / 豬扒包</div>
+            <div class="food-area">澳門 · 自由覓食</div>
+            <div class="food-note">瑪嘉烈蛋塔或安德魯蛋塔，午餐後順路找。豬扒包是澳門特色，咬下去是正宗炭烤麵包香。</div>
+            <div class="food-day-badge">Day 5 · 午餐後</div>
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-emoji">🏆</div>
+          <div>
+            <div class="food-name">中山論壇歡送晚宴</div>
+            <div class="food-area">中山 · 正式晚宴</div>
+            <div class="food-note">台青分享 + 新媒體短視頻比賽頒獎。著統一服裝出席，活動後自由交流時間。</div>
+            <div class="food-day-badge">Day 4 · 正式晚宴</div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /FOOD -->
+
+    <!-- IG REELS -->
+    <section class="section" id="reels">
+      <div class="section-head">
+        <div class="section-stamp-mini" style="border-color:#C589A8;color:#C589A8;"><i class="ph ph-bookmark-simple"></i></div>
+        <div>
+          <div class="section-title">存起來 · IG × 小紅書</div>
+          <div class="section-en">Saved Posts · 旅前參考</div>
+        </div>
+      </div>
+      <div class="reels-grid">
+
+        <!-- ── 廣州 Day 1–2 ── -->
+        <div class="reels-group-title">📍 廣州 <span style="font-weight:400;color:var(--ink-pale);">Day 1–2</span></div>
+
+        <div class="reel-card">
+          <div class="reel-thumb" style="background:var(--amber-pale);">
+            <span>🏘️</span>
+            <span class="reel-thumb-tag" style="background:var(--amber-pale);color:var(--amber);border:1px solid var(--amber);">永慶坊</span>
+          </div>
+          <div class="reel-body">
+            <div class="reel-handle" style="color:var(--amber);">小紅書 <span class="reel-platform xhs">🔴 小紅書</span></div>
+            <div class="reel-title">廣州永慶坊 citywalk 一日遊攻略</div>
+            <div class="reel-desc">廣州超好逛的百年騎樓建築群，恩寧路滿滿歷史感，文創小店、咖啡、街頭塗鴉一條街搞定。</div>
+            <div class="reel-actions">
+              <a href="http://xhslink.com/o/6SAKu5ix5h9" target="_blank" rel="noopener" class="reel-btn" style="color:var(--amber);border-color:var(--amber);">▶ 看筆記</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reel-card">
+          <div class="reel-thumb" style="background:var(--teal-pale);">
+            <span>🛍️</span>
+            <span class="reel-thumb-tag" style="background:var(--teal-pale);color:#5A9B96;border:1px solid var(--teal);">永慶坊・文創</span>
+          </div>
+          <div class="reel-body">
+            <div class="reel-handle" style="color:#5A9B96;"><span class="reel-platform xhs">🔴 小紅書</span></div>
+            <div class="reel-title">永慶坊特色文創 13 家（附地址）</div>
+            <div class="reel-desc">恩寧路到永慶坊沿線精選 13 家文創小店，陶瓷、活版印刷、手作皮具，每間附實際地址方便導航。</div>
+            <div class="reel-actions">
+              <a href="http://xhslink.com/o/7NM2fsqr8QI" target="_blank" rel="noopener" class="reel-btn" style="color:#5A9B96;border-color:var(--teal);">▶ 看筆記</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reel-card">
+          <div class="reel-thumb" style="background:var(--rose-pale);">
+            <span>🧸</span>
+            <span class="reel-thumb-tag" style="background:var(--rose-pale);color:#B08090;border:1px solid var(--rose);">永慶坊・Jellycat</span>
+          </div>
+          <div class="reel-body">
+            <div class="reel-handle" style="color:#B08090;"><span class="reel-platform xhs">🔴 小紅書</span></div>
+            <div class="reel-title">永慶坊的 Jellycat・小籠包系列太可愛</div>
+            <div class="reel-desc">永慶坊有貨齊的 Jellycat 專門店，食物系列特別完整，小籠包、蛋黃酥，在台灣根本搶不到。</div>
+            <div class="reel-actions">
+              <a href="http://xhslink.com/o/6YX1gPTDpOk" target="_blank" rel="noopener" class="reel-btn" style="color:#B08090;border-color:var(--rose);">▶ 看筆記</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 中山 Day 3 ── -->
+        <div class="reels-group-title">📍 中山 <span style="font-weight:400;color:var(--ink-pale);">Day 3</span></div>
+
+        <div class="reel-card">
+          <div class="reel-thumb" style="background:var(--jade-pale);">
+            <span>🏛️</span>
+            <span class="reel-thumb-tag" style="background:var(--jade-pale);color:#5A9B96;border:1px solid var(--jade);">孫文西步行街</span>
+          </div>
+          <div class="reel-body">
+            <div class="reel-handle" style="color:#5A9B96;"><span class="reel-platform xhs">🔴 小紅書</span></div>
+            <div class="reel-title">中山孫文西步行街・新改造騎樓超好逛</div>
+            <div class="reel-desc">中山剛翻新的百年騎樓街，開了很多新店，打卡建築外觀也很出片，逛街順便了解中山歷史。</div>
+            <div class="reel-actions">
+              <a href="http://xhslink.com/o/9XvOtlBu2Ar" target="_blank" rel="noopener" class="reel-btn" style="color:#5A9B96;border-color:var(--jade);">▶ 看筆記</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reel-card">
+          <div class="reel-thumb" style="background:var(--lav-pale);">
+            <span>🛒</span>
+            <span class="reel-thumb-tag" style="background:var(--lav-pale);color:#9080C0;border:1px solid var(--lavender);">中山・名創優品</span>
+          </div>
+          <div class="reel-body">
+            <div class="reel-handle" style="color:#9080C0;"><span class="reel-platform xhs">🔴 小紅書</span></div>
+            <div class="reel-title">中山步行街的名創優品一定要逛</div>
+            <div class="reel-desc">中山步行街有家特別的 Miniso，陳設有特色比一般店款式更多，是當地人推薦的必逛打卡店。</div>
+            <div class="reel-actions">
+              <a href="http://xhslink.com/o/g23QEyRoDG" target="_blank" rel="noopener" class="reel-btn" style="color:#9080C0;border-color:var(--lavender);">▶ 看筆記</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 澳門 Day 5 ── -->
+        <div class="reels-group-title">📍 澳門 <span style="font-weight:400;color:var(--ink-pale);">Day 5</span></div>
+
+        <div class="reel-card">
+          <div class="reel-thumb" style="background:var(--jade-pale);">
+            <span>🥧</span>
+            <span class="reel-thumb-tag" style="background:var(--jade-pale);color:#5A9B96;border:1px solid var(--jade);">大三巴</span>
+          </div>
+          <div class="reel-body">
+            <div class="reel-handle" style="color:#5A9B96;">macauluxury8 <span class="reel-platform ig">📸 IG</span></div>
+            <div class="reel-title">澳門大三巴・網紅葡撻 ＆ 金箔雪糕</div>
+            <div class="reel-desc">大三巴牌坊步行街最 IG 的兩樣甜點：現烤葡式蛋塔 + 金箔冰淇淋，邊吃邊拍超出片。</div>
+            <div class="reel-actions">
+              <a href="https://www.instagram.com/p/DVUzNPGD6X3/" target="_blank" rel="noopener" class="reel-btn" style="color:#5A9B96;border-color:var(--jade);">▶ 看 Reel</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reel-card">
+          <div class="reel-thumb" style="background:var(--lav-pale);">
+            <span>🍽️</span>
+            <span class="reel-thumb-tag" style="background:var(--lav-pale);color:#9080C0;border:1px solid var(--lavender);">大三巴・5間</span>
+          </div>
+          <div class="reel-body">
+            <div class="reel-handle" style="color:#9080C0;">macau.foodie <span class="reel-platform ig">📸 IG</span></div>
+            <div class="reel-title">澳門大三巴周邊 5 間必吃美食</div>
+            <ul class="reel-food-list">
+              <li><span class="rfl-name">金美食</span><span class="rfl-hours">08:00–20:00　河邊新街 6A</span></li>
+              <li><span class="rfl-name">文記咖啡</span><span class="rfl-hours">08:00–18:00　庇山耶街 28</span></li>
+              <li><span class="rfl-name">旺記咖啡</span><span class="rfl-hours">10:00–20:00　大炮台街 1-A</span></li>
+              <li><span class="rfl-name">金福龍葡國菜</span><span class="rfl-hours">11:00–23:00　吉慶巷 26</span></li>
+              <li><span class="rfl-name">杏香園甜品</span><span class="rfl-hours">13:30–00:00　清平直街 13</span></li>
+            </ul>
+            <div class="reel-actions">
+              <a href="https://www.instagram.com/p/DSXOw5FCZhw/" target="_blank" rel="noopener" class="reel-btn" style="color:#9080C0;border-color:var(--lavender);">▶ 看 Reel</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 購物・通用 ── -->
+        <div class="reels-group-title">🛍️ 購物・通用</div>
+
+        <div class="reel-card">
+          <div class="reel-thumb" style="background:var(--amber-pale);">
+            <span>📋</span>
+            <span class="reel-thumb-tag" style="background:var(--amber-pale);color:var(--amber);border:1px solid var(--amber);">Miniso・好物</span>
+          </div>
+          <div class="reel-body">
+            <div class="reel-handle" style="color:var(--amber);"><span class="reel-platform xhs">🔴 小紅書</span></div>
+            <div class="reel-title">Miniso 好物清單・長期主義必入</div>
+            <div class="reel-desc">名創優品平價高質感好物推薦，適合出遊補貨。文具、香氛、收納品最值得帶回台灣的幾樣。</div>
+            <div class="reel-actions">
+              <a href="http://xhslink.com/o/8cHWuni5z35" target="_blank" rel="noopener" class="reel-btn" style="color:var(--amber);border-color:var(--amber);">▶ 看筆記</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reel-card">
+          <div class="reel-thumb" style="background:var(--rose-pale);">
+            <span>🏬</span>
+            <span class="reel-thumb-tag" style="background:var(--rose-pale);color:#B08090;border:1px solid var(--rose);">名創・旗艦店</span>
+          </div>
+          <div class="reel-body">
+            <div class="reel-handle" style="color:#B08090;"><span class="reel-platform xhs">🔴 小紅書</span></div>
+            <div class="reel-title">大城市的名創優品就是氣派</div>
+            <div class="reel-desc">廣州旗艦店比台灣店大好幾倍，頂樓有驚喜，逛完才知道台灣店有多小，進去就出不來。</div>
+            <div class="reel-actions">
+              <a href="http://xhslink.com/o/8VbflIp5bPg" target="_blank" rel="noopener" class="reel-btn" style="color:#B08090;border-color:var(--rose);">▶ 看筆記</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reel-card">
+          <div class="reel-thumb" style="background:var(--amber-pale);">
+            <span>🪞</span>
+            <span class="reel-thumb-tag" style="background:var(--amber-pale);color:var(--amber);border:1px solid var(--amber);">攝影技巧</span>
+          </div>
+          <div class="reel-body">
+            <div class="reel-handle" style="color:var(--amber);">travel.inspo <span class="reel-platform ig">📸 IG</span></div>
+            <div class="reel-title">帶著後照鏡去旅行・100% 出片率</div>
+            <div class="reel-desc">凸鏡創意攝影道具，放在任何景點前都能製造立體反射特效。古街、石板路、騎樓特別出片。</div>
+            <div class="reel-actions">
+              <a href="https://www.instagram.com/p/DW1vtEZgWW7/" target="_blank" rel="noopener" class="reel-btn" style="color:var(--amber);border-color:var(--amber);">▶ 看 Reel</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /REELS -->
+
+    <!-- NOTES -->
+    <section class="section" id="notes">
+      <div class="section-head">
+        <div class="section-stamp-mini"><i class="ph ph-notebook"></i></div>
+        <div>
+          <div class="section-title">旅遊注意事項</div>
+          <div class="section-en">Travel Notes · 出發前必讀</div>
+        </div>
+      </div>
+      <div class="notes-grid">
+
+        <div class="note-card">
+          <div class="note-card-title"><i class="ph ph-identification-card"></i> 入境文件</div>
+          <ul class="note-list">
+            <li><strong>進入中國大陸</strong>：台灣居民需持<strong>台胞證</strong>（台灣居民來往大陸通行證）</li>
+            <li><strong>進入澳門</strong>：台灣護照免簽 30 天，帶護照即可</li>
+            <li>兩種證件都帶，確認有效期距到期至少 6 個月</li>
+            <li>報名時確認主辦方安排之入境方式</li>
+          </ul>
+          <div class="note-alert">⚠️ 台胞證 + 台灣護照都要帶！缺一不可。</div>
+        </div>
+
+        <div class="note-card">
+          <div class="note-card-title amber"><i class="ph ph-device-mobile"></i> 通訊與網路</div>
+          <ul class="note-list">
+            <li>中國大陸<strong>封鎖 Google / FB / IG / LINE</strong></li>
+            <li>建議購買<strong>中國電話卡</strong>（中國移動/聯通，可在機場買）</li>
+            <li>用 Line 聯絡台灣親友需 VPN，出發前安裝好</li>
+            <li><strong>澳門不受限</strong>，Google、IG 全部正常</li>
+            <li>台灣手機漫遊費率可能昂貴，建議問電信業者</li>
+          </ul>
+        </div>
+
+        <div class="note-card">
+          <div class="note-card-title lav"><i class="ph ph-currency-cny"></i> 支付與現金</div>
+          <ul class="note-list">
+            <li>中國大陸主流是<strong>微信支付</strong>或<strong>支付寶</strong>，現金不常用</li>
+            <li>建議提前綁定台灣信用卡至支付寶（需實名驗證）</li>
+            <li>準備少量人民幣現金備用（¥500–1,000 即可）</li>
+            <li>澳門用港幣或澳門幣，大商場刷卡無礙</li>
+          </ul>
+        </div>
+
+        <div class="note-card">
+          <div class="note-card-title"><i class="ph ph-cloud-rain"></i> 天氣與服裝</div>
+          <ul class="note-list">
+            <li>廣東 6 月是<strong>梅雨季</strong>，高溫高濕（28–33°C）</li>
+            <li>必備：折疊雨傘或輕薄雨衣</li>
+            <li>室內冷氣強，準備一件薄外套</li>
+            <li>步行量大，穿<strong>防水透氣運動鞋</strong></li>
+            <li>SPF 50+ 防曬乳每 2 小時補擦</li>
+          </ul>
+        </div>
+
+        <div class="note-card">
+          <div class="note-card-title"><i class="ph ph-bus"></i> 隨團注意事項</div>
+          <ul class="note-list">
+            <li>每天準時在大廳集合，大巴不等人</li>
+            <li>著統一服裝期間請保持儀容整潔</li>
+            <li>進入紀念館/故居<strong>禁止拍照標示</strong>處遵守規定</li>
+            <li>在場合正式場合（論壇/晚宴）關靜音</li>
+            <li>不明白的事宜隨時詢問帶隊老師</li>
+          </ul>
+        </div>
+
+        <div class="note-card">
+          <div class="note-card-title amber"><i class="ph ph-plug"></i> 電器與插頭</div>
+          <ul class="note-list">
+            <li>中國電壓 <strong>220V</strong>，台灣 110V</li>
+            <li>台灣兩腳扁插（Type A）在中國<strong>可直插</strong>，電壓不同但大多充電器支援</li>
+            <li>確認充電器標示支援 100–240V</li>
+            <li>澳門部分插座是英式三腳（Type G），帶轉接頭</li>
+            <li>建議帶多孔延長線，酒店插座有限</li>
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- /NOTES -->
+
+    <!-- PACKING -->
+    <section class="section" id="packing">
+      <div class="section-head">
+        <div class="section-stamp-mini" style="border-color:var(--lavender);color:var(--lavender);"><i class="ph ph-suitcase-rolling"></i></div>
+        <div>
+          <div class="section-title">行李清單</div>
+          <div class="section-en">Packing List · 5 天 3 城</div>
+        </div>
+      </div>
+      <div class="pack-cols">
+
+        <div class="pack-col">
+          <div class="pack-col-title"><i class="ph ph-identification-card"></i> 證件・票務</div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>台灣護照 <span class="check-important">必帶（澳門）</span></span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>台胞證 <span class="check-important">必帶（大陸）</span></span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>學生證 / 青年身分證明</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>報名確認函 / 行程表</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>緊急聯絡人資訊</span></div>
+        </div>
+
+        <div class="pack-col">
+          <div class="pack-col-title"><i class="ph ph-t-shirt"></i> 服裝・配件</div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>統一服裝（大會發，多帶備用）</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>輕薄長袖外套（冷氣用）</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>防水透氣運動鞋</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>折疊雨傘或輕薄雨衣</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>換洗衣物 × 5 天</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>泳裝 <span class="check-note">飯店泳池必備</span></span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>正式場合衣物（論壇/晚宴）</span></div>
+        </div>
+
+        <div class="pack-col">
+          <div class="pack-col-title"><i class="ph ph-device-mobile"></i> 電子設備</div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>手機充電線 + 充電頭</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>行動電源（飛機禁 160Wh 以上）</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>電源轉接頭（澳門 Type G）</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>中國 SIM 卡 / 漫遊開通</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>VPN App（出發前安裝測試）</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>電捲棒 <span class="check-note">確認 100–240V 寬電壓</span></span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>相機 / 記憶卡（多帶充電）</span></div>
+        </div>
+
+        <div class="pack-col">
+          <div class="pack-col-title"><i class="ph ph-first-aid"></i> 藥品・日用</div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>防曬乳 SPF 50+</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>暈車藥（大巴長途）</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>腸胃藥 / 止瀉藥</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>感冒藥 / 退燒藥</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>化妝包（保養品 + 彩妝）</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>OK 繃 / 防磨腳貼</span></div>
+        </div>
+
+        <div class="pack-col">
+          <div class="pack-col-title"><i class="ph ph-currency-cny"></i> 財務・支付</div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>人民幣現金（¥500–1,000）</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>港幣 / 澳門幣（澳門用）</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>支付寶綁台灣信用卡</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>國際信用卡（Visa/Master）</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>確認海外刷卡已解鎖</span></div>
+        </div>
+
+        <div class="pack-col">
+          <div class="pack-col-title"><i class="ph ph-star"></i> 備忘・雜項</div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>小本子 + 筆（論壇筆記）</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>旅遊保險確認</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>下載百度地圖離線版</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>微信安裝並實名認證</span></div>
+          <div class="check-item"><div class="checkbox" onclick="toggleCheck(this)"></div><span>主辦方緊急聯絡電話存好</span></div>
+        </div>
+
+      </div>
+    </section><!-- /PACKING -->
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="footer-hand">「粵向山海，承先生志」<br>願此行有所收穫 🌿</div>
+      <div class="footer-stamp">
+        <span class="footer-stamp-emoji">🇲🇴</span>
+        <span class="footer-stamp-text">2026.06</span>
+      </div>
+    </div>
+
+  </main>
+</div><!-- /shell -->
+
+<script>
+/* ── checkbox toggle ── */
+function toggleCheck(el) {
+  el.classList.toggle('checked');
+  const item = el.closest('.check-item');
+  if (item) item.style.opacity = el.classList.contains('checked') ? '0.5' : '1';
+}
+
+/* ── copy button ── */
+const toast = document.getElementById('copy-toast');
+let toastTimer;
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const text = btn.dataset.copy;
+    navigator.clipboard.writeText(text).then(() => {
+      toast.textContent = '已複製：' + text;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+    });
+  });
+});
+
+/* ── sidebar nav highlight ── */
+const sections = document.querySelectorAll('section[id], div[id]');
+const navTabs  = document.querySelectorAll('.nav-tab');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const id = e.target.id;
+      navTabs.forEach(t => {
+        t.classList.toggle('active', t.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { rootMargin: '-40% 0px -50% 0px' });
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

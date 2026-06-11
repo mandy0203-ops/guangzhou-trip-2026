@@ -443,6 +443,10 @@ body {
       <span class="icon"><i class="ph ph-note-blank"></i></span>
       <span class="label">總覽</span>
     </a>
+    <a class="nav-tab" href="#transport">
+      <span class="icon"><i class="ph ph-airplane-tilt"></i></span>
+      <span class="label">交通</span>
+    </a>
     <a class="nav-tab" href="#itinerary">
       <span class="icon"><i class="ph ph-map-trifold"></i></span>
       <span class="label">行程</span>
@@ -532,6 +536,107 @@ body {
           <span class="sum-card-sub">全程統一接送</span>
         </div>
       </div>
+    </section>
+
+    <!-- TRANSPORT (往返交通) -->
+    <section class="section" id="transport">
+      <style>
+        #transport .trans-day{ font-family:var(--ff-hand); font-size:13px; font-weight:700; color:var(--ink-lt); margin:2px 0 12px; display:flex; align-items:center; gap:8px; }
+        #transport .trans-day .dot{ width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+        #transport .trans-day.go .dot{ background:var(--teal); }
+        #transport .trans-day.back .dot{ background:var(--lavender); }
+        #transport .tleg{ background:var(--white); border:1.5px solid var(--border); border-radius:14px; padding:14px 16px; margin-bottom:10px; position:relative; }
+        #transport .tleg::before{ content:''; position:absolute; top:13px; bottom:13px; left:0; width:4px; border-radius:0 4px 4px 0; }
+        #transport .tleg.air::before{ background:var(--teal); }
+        #transport .tleg.rail::before{ background:var(--amber); }
+        #transport .tleg.ret::before{ background:var(--lavender); }
+        #transport .tleg-top{ display:flex; align-items:center; gap:8px; margin-bottom:10px; flex-wrap:wrap; }
+        #transport .tleg-mode{ font-size:17px; line-height:1; }
+        #transport .tleg-no{ font-family:var(--ff-hand); font-weight:700; font-size:14px; }
+        #transport .tleg.air .tleg-no{ color:#4E938E; }
+        #transport .tleg.rail .tleg-no{ color:#9A7B3E; }
+        #transport .tleg.ret .tleg-no{ color:#8880A4; }
+        #transport .tleg-sub{ font-family:var(--ff-hand); font-size:12px; color:var(--ink-pale); }
+        #transport .tleg-dur{ margin-left:auto; font-family:var(--ff-en); font-size:12px; color:var(--ink-pale); background:var(--cream); border:1px solid var(--border); border-radius:9px; padding:1px 8px; }
+        #transport .trow{ display:flex; align-items:center; gap:10px; }
+        #transport .tend{ flex:1; }
+        #transport .tend.to{ text-align:right; }
+        #transport .tend .tt{ font-family:var(--ff-serif); font-size:23px; font-weight:700; line-height:1; }
+        #transport .tleg.air .tt{ color:#4E938E; }
+        #transport .tleg.rail .tt{ color:#9A7B3E; }
+        #transport .tleg.ret .tt{ color:#8880A4; }
+        #transport .tend .tc{ font-family:var(--ff-en); font-size:12px; color:var(--ink-lt); margin-top:3px; letter-spacing:.03em; }
+        #transport .tend .tp{ font-family:var(--ff-hand); font-size:11px; color:var(--ink-pale); }
+        #transport .tmid{ font-size:13px; color:var(--ink-pale); flex-shrink:0; }
+        #transport .tmeta{ margin-top:10px; display:flex; flex-wrap:wrap; gap:6px; }
+        #transport .tchip{ font-family:var(--ff-hand); font-size:11px; padding:2px 9px; border-radius:9px; background:var(--cream); border:1px solid var(--border); color:var(--ink-lt); }
+        #transport .tchip.seat{ background:var(--teal-pale); border-color:var(--teal-lt); color:#4E938E; font-weight:700; }
+        #transport .tleg.rail .tchip.seat{ background:var(--amber-pale); border-color:var(--amber); color:#9A7B3E; }
+        #transport .tleg.ret .tchip.seat{ background:var(--lav-pale); border-color:var(--lavender); color:#8880A4; }
+        #transport .tnote{ font-family:var(--ff-hand); font-size:12px; color:var(--ink-pale); margin:0 0 10px 6px; padding-left:12px; border-left:2px dashed var(--border); line-height:1.5; }
+      </style>
+      <div class="section-head">
+        <div class="section-stamp-mini"><i class="ph ph-airplane-tilt"></i></div>
+        <div>
+          <div class="section-title">往返交通</div>
+          <div class="section-en">Getting There &amp; Back · 已訂 ✓</div>
+        </div>
+      </div>
+
+      <!-- 去程 6/25 -->
+      <div class="trans-day go"><span class="dot"></span>6/25（四）去程 · 高雄 → 香港 → 廣州</div>
+
+      <div class="tleg air">
+        <div class="tleg-top">
+          <span class="tleg-mode"><i class="ph ph-airplane-takeoff"></i></span>
+          <span class="tleg-no">長榮 BR845</span>
+          <span class="tleg-sub">空客 321</span>
+          <span class="tleg-dur">1h40m</span>
+        </div>
+        <div class="trow">
+          <div class="tend from"><div class="tt">09:15</div><div class="tc">KHH</div><div class="tp">高雄小港・國際航廈</div></div>
+          <div class="tmid"><i class="ph ph-airplane"></i></div>
+          <div class="tend to"><div class="tt">10:55</div><div class="tc">HKG</div><div class="tp">香港國際機場 T1</div></div>
+        </div>
+        <div class="tmeta"><span class="tchip seat">經濟艙</span><span class="tchip">🍱 有餐食</span><span class="tchip">🧳 托運 23kg＋手提 7kg</span></div>
+      </div>
+
+      <div class="tnote">10:55 落地 → 14:32 高鐵，約 3.5h 緩衝：過關 → 機場快線/港鐵到「香港西九龍站」</div>
+
+      <div class="tleg rail">
+        <div class="tleg-top">
+          <span class="tleg-mode"><i class="ph ph-train"></i></span>
+          <span class="tleg-no">G6548 復興號</span>
+          <span class="tleg-sub">高鐵</span>
+          <span class="tleg-dur">1h45m</span>
+        </div>
+        <div class="trow">
+          <div class="tend from"><div class="tt">14:32</div><div class="tc">HK WK</div><div class="tp">香港西九龍站</div></div>
+          <div class="tmid"><i class="ph ph-train-simple"></i></div>
+          <div class="tend to"><div class="tt">16:17</div><div class="tc">GZ E</div><div class="tp">廣州東站</div></div>
+        </div>
+        <div class="tmeta"><span class="tchip seat">二等座</span><span class="tchip">🪪 刷證件進站・免取票</span></div>
+      </div>
+
+      <!-- 回程 6/29 -->
+      <div class="trans-day back" style="margin-top:18px;"><span class="dot"></span>6/29（一）回程 · 澳門 → 高雄</div>
+
+      <div class="tleg ret">
+        <div class="tleg-top">
+          <span class="tleg-mode"><i class="ph ph-airplane-takeoff"></i></span>
+          <span class="tleg-no">澳門航空 NX658</span>
+          <span class="tleg-sub">空客 321</span>
+          <span class="tleg-dur">1h25m</span>
+        </div>
+        <div class="trow">
+          <div class="tend from"><div class="tt">21:35</div><div class="tc">MFM</div><div class="tp">澳門國際機場</div></div>
+          <div class="tmid"><i class="ph ph-airplane"></i></div>
+          <div class="tend to"><div class="tt">23:00</div><div class="tc">KHH</div><div class="tp">高雄小港・國際航廈</div></div>
+        </div>
+        <div class="tmeta"><span class="tchip seat">經濟艙</span><span class="tchip">🌙 晚班・抵高雄 23:00</span></div>
+      </div>
+
+      <div class="tnote">🪪 台胞證＋簽注務必有效（去廣州＝入境大陸）· 回程 23:00 抵高雄，先想好機場到家交通</div>
     </section>
 
     <!-- ITINERARY -->

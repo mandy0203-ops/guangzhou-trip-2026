@@ -227,6 +227,10 @@ body {
 .tl-card-note { font-size: 12px; color: var(--ink-lt); line-height: 1.6; font-family: var(--ff-sans); }
 .tl-card-tags { display: flex; gap: 5px; margin-top: 6px; flex-wrap: wrap; }
 .tl-card-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.tl-card.tbd { border-style: dashed; border-color: var(--ink-pale); background: #FAFAF9; }
+.tl-card.tbd .tl-card-thumb { background: #ECECEC; color: var(--ink-pale); }
+.tl-card.tbd .tl-card-name { color: var(--ink-lt); }
+.chip.tbd { background: #E8E8E8; color: #888; }
 
 .chip { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-family: var(--ff-en); font-weight: 600; letter-spacing: 0.04em; }
 .chip.teal   { background: var(--teal-pale);  color: var(--teal); }
@@ -808,17 +812,14 @@ body {
           </div>
 
           <div class="tl-item">
-            <div class="tl-dot" style="border-color:var(--yel-deep);"></div>
-            <div class="tl-card">
+            <div class="tl-dot" style="border-color:var(--ink-pale);"></div>
+            <div class="tl-card tbd">
               <div class="tl-card-thumb food"><i class="ph ph-fork-knife"></i></div>
               <div class="tl-card-body">
                 <div class="tl-card-time">11:30 – 12:30</div>
-                <div class="tl-card-name">午餐｜向群飯店二沙島店</div>
-                <div class="tl-card-note">廣州老字號粵菜館，二沙島環境優美，臨珠江而坐。路程約15分鐘。</div>
-                <div class="tl-card-tags"><span class="chip yel">午餐</span><span class="chip lav">粵菜</span></div>
-                <div class="tl-card-actions">
-                  <a href="https://map.baidu.com/?newmap=1&wd=向群饭店二沙岛店" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
-                </div>
+                <div class="tl-card-name">午餐｜待定</div>
+                <div class="tl-card-note">原「向群飯店二沙島店」已取消，新用餐地點確認中。</div>
+                <div class="tl-card-tags"><span class="chip yel">午餐</span><span class="chip tbd">待定</span></div>
               </div>
             </div>
           </div>
@@ -943,7 +944,7 @@ body {
               <div class="tl-card-body">
                 <div class="tl-card-time">20:30</div>
                 <div class="tl-card-name">返回酒店</div>
-                <div class="tl-card-note">翌日 8:00 準時集合，路程 30 分鐘前往黃花崗。</div>
+                <div class="tl-card-note">翌日 8:00 準時集合，首站行程待定。</div>
                 <div class="tl-card-tags"><span class="chip rose">住宿</span></div>
               </div>
             </div>
@@ -996,21 +997,14 @@ body {
         <div class="timeline">
 
           <div class="tl-item">
-            <div class="tl-dot" style="border-color:var(--amber);"></div>
-            <div class="tl-card" style="border-color:var(--amber-pale);">
+            <div class="tl-dot" style="border-color:var(--ink-pale);"></div>
+            <div class="tl-card tbd">
               <div class="tl-card-thumb hist"><i class="ph ph-flower"></i></div>
               <div class="tl-card-body">
                 <div class="tl-card-time">8:00 集合 → 8:30 – 9:30</div>
-                <div class="tl-card-name">黃花崗七十二烈士墓・祭拜先賢</div>
-                <div class="tl-card-note">
-                  1911 年廣州起義中犧牲的 72 位革命先烈長眠於此，是本次研學「承先生志」的核心精神場域。<br>
-                  📍 越秀區先烈中路 79 號｜路程約 30 分鐘
-                  <button class="copy-btn" data-copy="广州市越秀区先烈中路79号 黄花岗七十二烈士墓">複製地址</button>
-                </div>
-                <div class="tl-card-tags"><span class="chip amber">歷史</span><span class="chip gray">祭拜</span></div>
-                <div class="tl-card-actions">
-                  <a href="https://map.baidu.com/?newmap=1&wd=黄花岗七十二烈士墓" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
-                </div>
+                <div class="tl-card-name">上午行程｜待定</div>
+                <div class="tl-card-note">原「黃花崗七十二烈士墓・祭拜先賢」已取消，新行程確認中。</div>
+                <div class="tl-card-tags"><span class="chip tbd">待定</span></div>
               </div>
             </div>
           </div>
@@ -1388,12 +1382,12 @@ body {
           </div>
         </div>
 
-        <div class="food-item">
+        <div class="food-item" style="opacity:.7;">
           <div class="food-emoji">🍜</div>
           <div>
-            <div class="food-name">向群飯店二沙島店</div>
-            <div class="food-area">廣州・二沙島 · 正式午餐</div>
-            <div class="food-note">廣州粵菜老字號，二沙島環境優美，鄰珠江而坐，傳統白切雞、蒸魚不容錯過。</div>
+            <div class="food-name">午餐｜待定</div>
+            <div class="food-area">廣州 · 用餐地點調整中</div>
+            <div class="food-note">原「向群飯店二沙島店」已取消，新地點確認後補上。</div>
             <div class="food-day-badge">Day 2 · 午餐</div>
           </div>
         </div>

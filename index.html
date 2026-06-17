@@ -270,6 +270,7 @@ body {
 }
 .hotel-body { flex: 1; }
 .hotel-name { font-family: var(--ff-serif); font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.hotel-booked { display: inline-block; margin-left: 8px; vertical-align: middle; font-family: var(--ff-hand); font-size: 12px; font-weight: 700; color: var(--teal); background: var(--teal-pale); border: 1px solid var(--teal-lt); border-radius: 8px; padding: 1px 8px; }
 .hotel-score {
   display: inline-flex; align-items: center; gap: 4px;
   background: var(--teal-pale); color: var(--teal); font-weight: 700;
@@ -1308,13 +1309,13 @@ body {
         </div>
       </div>
 
-      <div class="hotel-section-label">🏙️ 廣州（6/25–27 · 2 晚）</div>
+      <div class="hotel-section-label">🏙️ 廣州（6/25–27 · 2 晚）· 已訂 ✓</div>
 
       <!-- 廣州 · 全季 -->
       <div class="hotel-card">
         <div class="hotel-thumb" style="background:var(--teal-pale);">🏨</div>
         <div class="hotel-body">
-          <div class="hotel-name">全季飯店（廣州中大地鐵站店）</div>
+          <div class="hotel-name">全季飯店（廣州中大地鐵站店）<span class="hotel-booked">已訂 ✓</span></div>
           <div class="hotel-score">⭐ 9.7 / 10 &nbsp;滿意（2,221 則評論）</div>
           <div class="hotel-meta">
             <span><i class="ph ph-map-pin"></i> 海珠區怡樂路 76 號</span>
@@ -1342,19 +1343,21 @@ body {
         <div class="hotel-thumb" style="background:var(--amber-pale);">🏩</div>
         <div class="hotel-body">
           <div class="hotel-name">中山利和希爾頓飯店</div>
-          <div class="hotel-score amber">⭐ 9.4 / 10 &nbsp;極好</div>
+          <div class="hotel-score amber">⭐ 9.4 / 10 &nbsp;極好（6,481 則評論）</div>
           <div class="hotel-meta">
             <span><i class="ph ph-map-pin"></i> 中山市東區中山三路 16 號</span>
             <span><i class="ph ph-door-open"></i> 456 間客房</span>
-            <span><i class="ph ph-star"></i> 6,479 則評論</span>
+            <span><i class="ph ph-buildings"></i> 5★ 希爾頓集團</span>
           </div>
           <div class="hotel-chips">
             <span class="chip amber">連通利和廣場</span>
             <span class="chip teal">室內溫水泳池</span>
-            <span class="chip lav">5間餐廳酒吧</span>
-            <span class="chip yel">3,600㎡宴會廳</span>
+            <span class="chip lav">行政酒廊</span>
+            <span class="chip teal">健身房・網球場</span>
+            <span class="chip lav">5 間餐廳酒吧</span>
+            <span class="chip yel">免費停車</span>
           </div>
-          <div class="hotel-note">✦ 直連利和廣場購物中心，日式 Omakase / 義式 / 國際自助早餐三選。距中山北站 6.7km，網球場、健身房完備。</div>
+          <div class="hotel-note">✦ 5 星希爾頓，直連利和廣場購物中心；日式 Omakase／義式／國際自助早餐三選。步行可達中山紀念圖書館（860m）、中山博物館（1.2km）、體育中心（1.1km）；距中山北站 6.7km。</div>
           <div class="hotel-actions">
             <a href="https://www.trip.com/w/NnAcPyfu3V2" target="_blank" rel="noopener" class="card-action-btn">🔗 Trip.com 預訂</a>
             <a href="https://map.baidu.com/?newmap=1&wd=中山利和希尔顿酒店" target="_blank" rel="noopener" class="card-action-btn">📍 百度地圖</a>
@@ -1769,7 +1772,6 @@ body {
 
     <!-- FOOTER -->
     <div class="footer">
-      <div class="footer-hand">「粵向山海，承先生志」<br>願此行有所收穫 🌿</div>
       <div class="footer-stamp">
         <span class="footer-stamp-emoji">🇲🇴</span>
         <span class="footer-stamp-text">2026.06</span>

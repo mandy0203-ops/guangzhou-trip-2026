@@ -231,10 +231,6 @@ body {
 .tl-card.tbd .tl-card-thumb { background: #ECECEC; color: var(--ink-pale); }
 .tl-card.tbd .tl-card-name { color: var(--ink-lt); }
 .chip.tbd { background: #E8E8E8; color: #888; }
-.tl-card.illu { flex-direction: column; gap: 0; padding: 0; overflow: hidden; align-items: stretch; }
-.tl-card.illu .tl-illu { height: 104px; display: flex; align-items: center; justify-content: center; background-image: radial-gradient(circle at 1.5px 1.5px, rgba(255,255,255,.55) 1px, transparent 0); background-size: 13px 13px; }
-.tl-card.illu .tl-illu svg { height: 84px; width: auto; max-width: 88%; display: block; }
-.tl-card.illu .tl-card-body { padding: 12px 14px 14px; }
 
 .chip { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-family: var(--ff-en); font-weight: 600; letter-spacing: 0.04em; }
 .chip.teal   { background: var(--teal-pale);  color: var(--teal); }
@@ -866,30 +862,8 @@ body {
 
           <div class="tl-item">
             <div class="tl-dot"></div>
-            <div class="tl-card illu">
-              <div class="tl-illu" style="background-color:#DCF0EE;"><svg viewBox="0 0 230 96" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="粵劇藝術博物館手繪插畫">
-                <g stroke="#5B5159" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
-                  <rect x="30" y="42" width="86" height="40" rx="3" fill="#F5F2E8"/>
-                  <path d="M23 44 Q27 27 40 30 Q48 19 73 19 Q98 19 106 30 Q119 27 123 44 Q110 40 73 40 Q36 40 23 44 Z" fill="#7FB4AE"/>
-                  <path d="M40 31 Q73 24 106 31" fill="none" stroke="#4E8983" stroke-width="1.3"/>
-                  <rect x="62" y="58" width="22" height="24" rx="2" fill="#C8A870"/>
-                  <path d="M73 58 V82" stroke="#9A7B3E" stroke-width="1.1"/>
-                  <rect x="38" y="54" width="15" height="13" rx="2" fill="#E4C4CC"/>
-                  <rect x="93" y="54" width="15" height="13" rx="2" fill="#BEB8CC"/>
-                  <ellipse cx="47" cy="38" rx="4.5" ry="6" fill="#D98A86" stroke="#B5615C" stroke-width="1.1"/>
-                  <ellipse cx="99" cy="38" rx="4.5" ry="6" fill="#D98A86" stroke="#B5615C" stroke-width="1.1"/>
-                </g>
-                <g transform="translate(178 50)" stroke="#5B5159" stroke-width="1.8" stroke-linejoin="round">
-                  <circle r="23" fill="#F8F6F8"/>
-                  <path d="M-23 -3 Q0 -30 23 -3" fill="#9ECFCC"/>
-                  <path d="M0 -26 Q-3 -16 0 -9 Q3 -16 0 -26 Z" fill="#E4C4CC"/>
-                  <circle cx="-8" cy="5" r="2.7" fill="#5B5159" stroke="none"/>
-                  <circle cx="8" cy="5" r="2.7" fill="#5B5159" stroke="none"/>
-                  <path d="M-14 3 Q-8 -4 -2 2" fill="none" stroke-width="1.3"/>
-                  <path d="M2 2 Q8 -4 14 3" fill="none" stroke-width="1.3"/>
-                  <path d="M-5 14 Q0 17 5 14" fill="none" stroke-width="1.3"/>
-                </g>
-              </svg></div>
+            <div class="tl-card">
+              <div class="tl-card-thumb sight"><i class="ph ph-theater-masks"></i></div>
               <div class="tl-card-body">
                 <div class="tl-card-time">17:30 – 18:30</div>
                 <div class="tl-card-name">粵劇博物館</div>
@@ -926,31 +900,8 @@ body {
 
           <div class="tl-item">
             <div class="tl-dot"></div>
-            <div class="tl-card illu" style="border-color:#FDECD8;">
-              <div class="tl-illu" style="background-color:#F0E8D4;"><svg viewBox="0 0 230 96" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="麻辣小龍蝦手繪插畫">
-                <g fill="none" stroke="#D8C9A0" stroke-width="2.6" stroke-linecap="round" opacity=".85">
-                  <path d="M96 24 q-5 -9 2 -15 q7 -7 2 -13"/>
-                  <path d="M118 20 q-5 -9 2 -15 q7 -7 2 -13"/>
-                  <path d="M140 24 q-5 -9 2 -15 q7 -7 2 -13"/>
-                </g>
-                <g stroke="#5B5159" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
-                  <path d="M48 56 Q118 50 188 56 Q182 84 118 86 Q54 84 48 56 Z" fill="#ECE6D6"/>
-                  <path d="M48 56 Q118 64 188 56" fill="none" stroke-width="1.4"/>
-                </g>
-                <g transform="translate(118 48)" stroke="#7A2B22" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
-                  <path d="M2 5 q20 -2 31 9 q9 9 4 20 q-7 -4 -9 -11 q-2 7 -9 9 q0 -7 -4 -11 q-4 5 -11 4 q4 -5 4 -13 Z" fill="#D6543F"/>
-                  <ellipse cx="-6" cy="2" rx="18" ry="13" fill="#E2654C"/>
-                  <circle cx="-23" cy="0" r="10" fill="#D6543F"/>
-                  <circle cx="-28" cy="-5" r="3.1" fill="#F8F6F8" stroke-width="1.4"/>
-                  <circle cx="-28" cy="-5" r="1.3" fill="#5B5159" stroke="none"/>
-                  <path d="M-31 -4 Q-48 -15 -56 -26" fill="none"/>
-                  <path d="M-31 1 Q-50 -1 -59 -6" fill="none"/>
-                  <path d="M-16 11 Q-29 20 -40 16 Q-36 11 -31 13 Q-36 7 -33 4" fill="#E2654C"/>
-                  <path d="M8 -7 Q17 -18 28 -16 Q24 -9 16 -11" fill="#E2654C"/>
-                </g>
-                <path d="M70 64 q12 4 20 -2" fill="none" stroke="#C0443C" stroke-width="2.4" stroke-linecap="round"/>
-                <path d="M168 66 q-11 4 -20 0" fill="none" stroke="#C0443C" stroke-width="2.4" stroke-linecap="round"/>
-              </svg></div>
+            <div class="tl-card" style="border-color:#FDECD8;">
+              <div class="tl-card-thumb food" style="background:#FDE8D0;color:#C06030;"><i class="ph ph-shrimp"></i></div>
               <div class="tl-card-body">
                 <div class="tl-card-time">18:30 – 19:45 🆓 個人自由</div>
                 <div class="tl-card-name">小龍蝦晚餐 🦞</div>
@@ -969,25 +920,8 @@ body {
 
           <div class="tl-item">
             <div class="tl-dot"></div>
-            <div class="tl-card illu" style="border-color:#EAE8F2;">
-              <div class="tl-illu" style="background-color:#ECEAF2;"><svg viewBox="0 0 230 96" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="名創優品購物手繪插畫">
-                <g fill="#C8B8D8"><circle cx="40" cy="20" r="2.6"/><circle cx="196" cy="22" r="2.6"/></g>
-                <g fill="#E4C4CC"><circle cx="58" cy="14" r="2.2"/><circle cx="180" cy="46" r="2.2"/></g>
-                <g stroke="#5B5159" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
-                  <path d="M150 50 h32 l4 34 h-40 Z" fill="#9ECFCC"/>
-                  <path d="M157 50 q9 -12 17 0" fill="none"/>
-                  <path d="M58 34 h42 l5 50 h-52 Z" fill="#C9BEDE"/>
-                  <path d="M68 34 q11 -15 22 0" fill="none"/>
-                  <circle cx="79" cy="56" r="7" fill="#F4ECEE" stroke-width="1.4"/>
-                  <circle cx="76" cy="54" r="1.2" fill="#5B5159" stroke="none"/>
-                  <circle cx="82" cy="54" r="1.2" fill="#5B5159" stroke="none"/>
-                  <path d="M75 59 q4 4 8 0" fill="none" stroke-width="1.3"/>
-                  <path d="M100 46 h48 l5 38 h-58 Z" fill="#E4C4CC"/>
-                  <path d="M111 46 q13 -15 26 0" fill="none"/>
-                  <path d="M130 46 q3 -14 13 -10 q-1 8 -7 10" fill="#BEB8CC"/>
-                </g>
-                <path d="M40 52 l2.6 6 6.4 .8 -4.8 4 1.6 6.4 -5.8 -3.2 -5.8 3.2 1.6 -6.4 -4.8 -4 6.4 -.8 Z" fill="#EDE6C0" stroke="#ACA078" stroke-width="1.2" stroke-linejoin="round"/>
-              </svg></div>
+            <div class="tl-card" style="border-color:#EAE8F2;">
+              <div class="tl-card-thumb shop" style="background:#ECEAF8;color:#9080C0;"><i class="ph ph-storefront"></i></div>
               <div class="tl-card-body">
                 <div class="tl-card-time">19:45 – 20:30 🆓 個人自由</div>
                 <div class="tl-card-name">Miniso 名創優品 🛍️</div>
